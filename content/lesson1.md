@@ -1,4 +1,4 @@
-const lesson1 = `
+
 | Sentence                                             | Correct option         | Wrong option 1         | Wrong option 2        |
 |------------------------------------------------------|-----------------------|-----------------------|----------------------|
 | First, I ___ my emails to check for new messages.    | check                  | attend                | finalize             |
@@ -9,7 +9,6 @@ const lesson1 = `
 | Later, I ___ documentation to keep records updated.  | update                 | join                  | drink                |
 | Finally, I ___ reports to summarize the progress.    | finalize               | start                 | check                |
 | I always ___ my calendar to plan meetings ahead.     | review                 | drink                 | write                |
-| I ___ coffee before starting my work for extra energy.| drink                  | write                 | attend               |
 | Every morning, I ___ my work systems to log in.      | log in                 | take                  | check                |
 | During the meeting, I ___ notes to remember key points.| take                  | finalize              | update               |
 | I ___ messages quickly to reply to urgent requests. | reply                  | write                 | attend               |
@@ -21,6 +20,3 @@ const lesson1 = `
 | I’m always ___ messages during meetings, which is annoying.| answering           | writing               | taking               |
 | I’m always ___ back-to-back meetings without breaks.| joining                | drinking              | reviewing            |
 | I’m always ___ dashboards to stay informed on progress.| checking              | finalizing            | taking               |
-`
-
-export default lesson1

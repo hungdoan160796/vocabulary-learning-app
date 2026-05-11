@@ -9,11 +9,13 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "next": "16.2.6",
-    "react": "19.2.4",
-    "react-dom": "19.2.4",
+    "dotenv": "^17.4.2",
     "framer-motion": "^11.0.0",
     "gray-matter": "^4.0.3",
+    "next": "16.2.6",
+    "openai": "^6.37.0",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
     "react-swipeable": "^7.0.1",
     "remark": "^15.0.1",
     "remark-gfm": "^4.0.0"
@@ -23,11 +25,11 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "autoprefixer": "^10.4.19",
     "eslint": "^9",
     "eslint-config-next": "16.2.6",
+    "postcss": "^8.4.39",
     "tailwindcss": "^4",
-    "typescript": "^5",
-    "autoprefixer": "^10.4.19",
-    "postcss": "^8.4.39"
+    "typescript": "^5"
   }
 }
