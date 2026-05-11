@@ -4,9 +4,7 @@ import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 
 const USERS = [
-  "Student A",
-  "Student B",
-  "Student C",
+  "A Hoài"
 ]
 
 export default function HomePage() {

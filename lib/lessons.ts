@@ -6,7 +6,7 @@ import { parseMarkdownLesson } from "./markdownParser"
 export const lessons = [
   {
     id: "lesson1",
-    title: "Data Vocabulary",
+    title: "Routine",
     cards: parseMarkdownLesson(lesson1),
   }
 ]
