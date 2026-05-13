@@ -41,12 +41,14 @@ export default function LessonsPage() {
   
 
   return (
-    <main className="min-h-screen p-6">
-      <div className="mb-8 flex items-center justify-between">
+    <div className="w-full flex flex-col justify-center items-center min-w-100 p-6">
+      <div className="w-[50%] flex flex-col justify-center p-4">
+        <div className="mb-4 flex items-center justify-between p-8 rounded-xl shadow-lg bg-white">
         <h1 className="text-3xl font-bold">Lessons</h1>
       </div>
 
       <LessonCarousel lessons={lessons} learnerId={learnerId}/>
-    </main>
+      </div>
+    </div>
   )
 }

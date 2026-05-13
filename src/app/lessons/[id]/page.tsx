@@ -54,10 +54,10 @@ export default function LessonPage() {
 
 
   return (
-    <div className="w-[50%] min-w-100 p-6">
-      <div className="w-full flex flex-col justify-center p-4">
-        <div className="mb-4 flex items-center justify-between">
-          <h1 className="text-xl font-bold">{lesson.title}</h1>
+    <div className="w-full flex flex-col justify-center items-center min-w-100 p-6">
+      <div className="w-[50%] flex flex-col justify-center p-4">
+        <div className="mb-4 flex items-center justify-between p-8 rounded-xl shadow-lg bg-white">
+          <h1 className="text-3xl font-bold">{lesson.title}</h1>
 
           <p>
             {currentIndex + 1} / {lesson.cards.length}
