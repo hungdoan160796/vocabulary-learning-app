@@ -1,92 +1,98 @@
 [
   {
-    "sentence": "Do you have enough ___ to help with the client presentation this afternoon?",
-    "correct": "bandwidth",
-    "wrong1": "blocker",
-    "wrong2": "deep dive"
-  },
-  {
-    "sentence": "Just a ___ — the release deadline moved up to Friday.",
-    "correct": "heads-up",
-    "wrong1": "sync",
-    "wrong2": "ping"
-  },
-  {
-    "sentence": "I’ll ___ you the updated budget spreadsheet after the call.",
-    "correct": "ping",
-    "wrong1": "ramp up",
-    "wrong2": "clarify"
-  },
-  {
-    "sentence": "Let’s schedule a quick ___ tomorrow to align on priorities.",
+    "sentence": "Let's schedule a ___ to align on deliverables.",
     "correct": "sync",
-    "wrong1": "blocker",
-    "wrong2": "workflow"
+    "wrong1": "cancel",
+    "wrong2": "ignore"
   },
   {
-    "sentence": "The legal review is becoming a major ___ for the launch.",
-    "correct": "blocker",
-    "wrong1": "bandwidth",
-    "wrong2": "FYI"
+    "sentence": "Do you have ___ to handle the client request?",
+    "correct": "bandwidth",
+    "wrong1": "distance",
+    "wrong2": "speed"
   },
   {
-    "sentence": "We’re planning to ___ production before the holiday season.",
-    "correct": "ramp up",
-    "wrong1": "circle back",
-    "wrong2": "touch base"
+    "sentence": "I'll ___ you the updated specs after the call.",
+    "correct": "ping",
+    "wrong1": "call",
+    "wrong2": "delete"
   },
   {
-    "sentence": "___, the marketing team already approved the campaign assets.",
-    "correct": "FYI",
-    "wrong1": "Hang on",
-    "wrong2": "Deep dive"
-  },
-  {
-    "sentence": "We should ___ into the customer feedback data next week.",
-    "correct": "deep dive",
-    "wrong1": "ping",
-    "wrong2": "clarify"
-  },
-  {
-    "sentence": "Let’s ___ after the client meeting once we have more details.",
-    "correct": "circle back",
-    "wrong1": "ramp up",
-    "wrong2": "sync up bandwidth"
-  },
-  {
-    "sentence": "Can we ___ later today to review the hiring plan?",
+    "sentence": "Can we ___ tomorrow to review the budget?",
     "correct": "touch base",
-    "wrong1": "deep dive",
-    "wrong2": "blocker"
+    "wrong1": "jump high",
+    "wrong2": "sleep early"
   },
   {
-    "sentence": "Sorry, can you ___ what you mean by “horizontal scaling”?",
+    "sentence": "The security audit is a ___ for launch.",
+    "correct": "blocker",
+    "wrong1": "booster",
+    "wrong2": "helper"
+  },
+  {
+    "sentence": "We're ___ production ahead of launch.",
+    "correct": "ramping up",
+    "wrong1": "shutting down",
+    "wrong2": "pausing"
+  },
+  {
+    "sentence": "___, marketing approved the new campaign.",
+    "correct": "FYI",
+    "wrong1": "LOL",
+    "wrong2": "OMG"
+  },
+  {
+    "sentence": "We'll ___ into Q2 sales figures next week.",
+    "correct": "deep dive",
+    "wrong1": "skim",
+    "wrong2": "skip"
+  },
+  {
+    "sentence": "Let's ___ after you analyze the feedback.",
+    "correct": "circle back",
+    "wrong1": "run away",
+    "wrong2": "ignore"
+  },
+  {
+    "sentence": "Sorry, can you ___ that?",
     "correct": "clarify",
-    "wrong1": "ping",
-    "wrong2": "ramp up"
+    "wrong1": "confuse",
+    "wrong2": "hide"
   },
   {
-    "sentence": "Could you run that by me again? I missed the deployment date.",
-    "correct": "run that by me again",
-    "wrong1": "deep dive",
-    "wrong2": "workflow"
+    "sentence": "Could you ___ me again?",
+    "correct": "run that by",
+    "wrong1": "forget",
+    "wrong2": "skip"
   },
   {
-    "sentence": "I’m not sure I’m ___. Can you explain the workflow one more time?",
+    "sentence": "I'm not sure I'm ___ – can you walk me through the workflow?",
     "correct": "following",
-    "wrong1": "syncing",
-    "wrong2": "ramping"
+    "wrong1": "leading",
+    "wrong2": "ignoring"
   },
   {
-    "sentence": "So, you’re ___ the outage affected all regional servers?",
-    "correct": "saying",
-    "wrong1": "touching",
-    "wrong2": "circling"
+    "sentence": "We experienced server ___ overnight after the migration.",
+    "correct": "latency",
+    "wrong1": "speed",
+    "wrong2": "strength"
   },
   {
-    "sentence": "Hang on, did you say the client requested an earlier delivery date?",
-    "correct": "heads-up",
-    "wrong1": "blocker",
-    "wrong2": "workflow"
+    "sentence": "There's confusion around ownership of the ___ flow updates.",
+    "correct": "onboarding",
+    "wrong1": "exiting",
+    "wrong2": "departing"
+  },
+  {
+    "sentence": "I'm not sure I'm following – can you walk me through the ___?",
+    "correct": "workflow",
+    "wrong1": "holiday",
+    "wrong2": "weekend"
+  },
+  {
+    "sentence": "Could you ___ what ‘scaling the app’ means here?",
+    "correct": "clarify",
+    "wrong1": "complicate",
+    "wrong2": "confuse"
   }
 ]

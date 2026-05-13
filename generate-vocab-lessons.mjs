@@ -14,11 +14,10 @@ const client = new OpenAI({
 // =========================
 
 const INPUT_DIR =
-  "D:\\teaching-project-1\\data\\ahoai\\improved"
+  "E:\\teaching-project-1\\data\\ahoai\\improved"
 
 const OUTPUT_CONTENT_DIR =
-  "D:\\vocabulary-learning-app\\content\\ahoai"
-
+  "E:\\vocabulary-learning-app\\content\\ahoai"
 
 // =========================
 // GET INPUT FILE
@@ -51,24 +50,194 @@ function extractLessonNumber(filename) {
   return match[1]
 }
 
-function buildLessonVariableName(lessonNumber) {
-  return `lesson${lessonNumber}`
+function cleanMarkdown(markdown) {
+  return markdown
+    .replace(/```[\s\S]*?```/g, "")
+    .replace(/`.*?`/g, "")
+    .replace(/[#>*_-]/g, " ")
+    .replace(/\n+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim()
 }
 
-function buildOutputFileName(lessonNumber) {
-  return `lesson${lessonNumber}.ts`
+function escapeRegex(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
 }
 
-function buildImportLine(lessonNumber) {
-  return `import lesson${lessonNumber} from "../content/lesson${lessonNumber}"`
+// =========================
+// FUNCTION 1
+// .md -> vocab list using GPT
+// =========================
+
+async function generateVocabularyList(markdown) {
+  const prompt = `
+You are extracting vocabulary for English learners.
+
+TASK:
+Generate a JSON array of useful vocabulary words from the lesson.
+
+RULES:
+- Include only meaningful vocabulary
+- Pick about 10-20 words/phrases
+- Prefer:
+  nouns, verbs, adjectives, phrases
+- Avoid:
+  function words, grammar words, filler words, names of people/places/brands
+- Prioritize words that are important for understanding the lesson content
+- The array must not contain duplicates
+- Output ONLY valid JSON array
+- No markdown
+
+Example:
+[
+  "deadline",
+  "schedule",
+  "submit report"
+]
+
+Lesson:
+
+${markdown}
+`
+
+  const response =
+    await client.chat.completions.create({
+      model: "gpt-4.1-mini",
+      temperature: 0.3,
+      messages: [
+        {
+          role: "system",
+          content:
+            "You extract vocabulary lists.",
+        },
+        {
+          role: "user",
+          content: prompt,
+        },
+      ],
+    })
+  logUsage("STEP 1 - Vocabulary List", response)
+  const content =
+    response.choices[0].message.content?.trim()
+
+  if (!content) {
+    throw new Error(
+      "No vocabulary generated"
+    )
+  }
+
+  return JSON.parse(content)
 }
 
-function buildLessonObject(lessonNumber) {
-  return `{
-    id: "lesson${lessonNumber}",
-    title: "Lesson ${lessonNumber}",
-    content: lesson${lessonNumber},
-  }`
+// =========================
+// FUNCTION 2
+// Locate vocab inside markdown
+// Returns:
+// [
+//   {
+//     word,
+//     sentence
+//   }
+// ]
+// =========================
+
+function locateVocabularySentences(
+  markdown,
+  vocabularyList
+) {
+  const cleanText = cleanMarkdown(markdown)
+
+  // Split by sentence-ending punctuation
+  const sentences =
+    cleanText.match(/[^.!?]+[.!?]+/g) || []
+
+  const results = []
+
+  for (const vocab of vocabularyList) {
+    const regex = new RegExp(
+      `\\b${escapeRegex(vocab)}\\b`,
+      "i"
+    )
+
+    const matchedSentence = sentences.find(
+      (sentence) => regex.test(sentence)
+    )
+
+    if (matchedSentence) {
+      results.push({
+        word: vocab,
+        sentence: matchedSentence.trim(),
+      })
+    }
+  }
+
+  return results
+}
+
+// =========================
+// FUNCTION 3
+// sentence -> flashcard object
+// =========================
+
+async function generateFlashcards(
+  sentenceObjects
+) {
+  const prompt = `
+You are generating vocabulary revision flashcards.
+
+TASK:
+Convert each object into this format:
+
+{
+  "sentence": "First, I ___ my emails.",
+  "correct": "check",
+  "wrong1": "attend",
+  "wrong2": "finalize"
+}
+
+RULES:
+- Replace ONLY the correct word with ___
+- wrong answers must not be synonyms of the correct word, or acceptably close in meaning
+- If original sentence is too long, simplify the sentence but keep the same meaning and the target word
+- Output ONLY valid JSON array
+- No markdown
+
+INPUT:
+
+${JSON.stringify(
+  sentenceObjects,
+  null,
+  2
+)}
+`
+
+  const response =
+    await client.chat.completions.create({
+      model: "gpt-4.1-mini",
+      temperature: 0.7,
+      messages: [
+        {
+          role: "system",
+          content:
+            "You create vocabulary flashcards.",
+        },
+        {
+          role: "user",
+          content: prompt,
+        },
+      ],
+    })
+  logUsage("STEP 3 - Flashcards", response)
+  const content =
+    response.choices[0].message.content?.trim()
+
+  if (!content) {
+    throw new Error(
+      "No flashcards generated"
+    )
+  }
+
+  return JSON.parse(content)
 }
 
 // =========================
@@ -76,108 +245,126 @@ function buildLessonObject(lessonNumber) {
 // =========================
 
 async function main() {
-  // Read markdown lesson
-  const markdown = await fs.readFile(inputPath, "utf-8")
+  const markdown = await fs.readFile(
+    inputPath,
+    "utf-8"
+  )
 
-  const lessonNumber = extractLessonNumber(inputFile)
+  const lessonNumber =
+    extractLessonNumber(inputFile)
 
-  const lessonVariable =
-    buildLessonVariableName(lessonNumber)
+  // =========================
+  // STEP 1
+  // Generate vocabulary list
+  // =========================
 
-  const outputFileName =
-    buildOutputFileName(lessonNumber)
+  console.log(
+    "Generating vocabulary list..."
+  )
 
-  const outputPath = path.join(
+  const vocabularyList =
+    await generateVocabularyList(markdown)
+
+  // Optional debug output
+  const vocabDebugPath = path.join(
     OUTPUT_CONTENT_DIR,
-    outputFileName
+    `lesson${lessonNumber}-vocabularyList.json`
+  )
+
+  await fs.writeFile(
+    vocabDebugPath,
+    JSON.stringify(
+      vocabularyList,
+      null,
+      2
+    )
   )
 
   // =========================
-  // OPENAI GENERATION
+  // STEP 2
+  // Locate vocab sentences
   // =========================
 
-  const prompt = `
-You are creating vocabulary revision flashcards for language learners.
+  console.log(
+    "Locating vocabulary in lesson..."
+  )
 
-IMPORTANT:
-- Focus on meaningful vocabulary only
-- Prefer content words:
-  nouns, verbs, adjectives, domain vocabulary
-- Avoid functional words:
-  always, often, very, really, etc.
+  const sentenceObjects =
+    locateVocabularySentences(
+      markdown,
+      vocabularyList
+    )
 
-Create a JSON file with 15 flashcards based on the following lesson content. Each flashcard should have a sentence with a ___ blank, one correct option that fits naturally, and two wrong options that are believable but incorrect.
+  // Optional debug output
+  const sentenceDebugPath = path.join(
+    OUTPUT_CONTENT_DIR,
+    `lesson${lessonNumber}-sentences.json`
+  )
 
-Example output format:
-[
-  {
-    "sentence": "First, I ___ my emails to check for new messages.",
-    "correct": "check",
-    "wrong1": "attend",
-    "wrong2": "finalize"
-  },
-  {
-    "sentence": "Then, I ___ meetings with my team to discuss tasks.",
-    "correct": "attend",
-    "wrong1": "write",
-    "wrong2": "drink"
-  }
-]
+  await fs.writeFile(
+    sentenceDebugPath,
+    JSON.stringify(
+      sentenceObjects,
+      null,
+      2
+    )
+  )
 
-Rules:
-- Sentence must contain ___ blank
-- Correct option must fit naturally
-- Wrong options should be believable
-- Generate 15 flashcards
-- Vocabulary must be extracted from the lesson content
-- Keep vocabulary useful for revision after studying lesson content
-
-Lesson content:
-
-${markdown}
-`
-
-  const response = await client.chat.completions.create({
-    model: "gpt-4.1-mini",
-    temperature: 0.7,
-    messages: [
-      {
-        role: "system",
-        content:
-          "You create vocabulary learning flashcards.",
-      },
-      {
-        role: "user",
-        content: prompt,
-      },
-    ],
-  })
-
-  const generatedTable =
-    response.choices[0].message.content?.trim()
-
-  if (!generatedTable) {
-    throw new Error("No flashcards generated")
-  }
   // =========================
-  // WRITE lessonX.json
+  // STEP 3
+  // Generate flashcards
   // =========================
 
-  // generatedTable is already JSON from the AI
-  const parsed = JSON.parse(generatedTable)
+  console.log(
+    "Generating flashcards..."
+  )
 
-  // pretty-print json
-  const jsonContent = JSON.stringify(parsed, null, 2)
+  const flashcards =
+    await generateFlashcards(
+      sentenceObjects
+    )
 
-  // replace .ts -> .json
-  const jsonOutputPath = outputPath.replace(".ts", ".json")
+  // =========================
+  // WRITE OUTPUT
+  // =========================
 
-  await fs.writeFile(jsonOutputPath, jsonContent)
+  const outputPath = path.join(
+    OUTPUT_CONTENT_DIR,
+    `lesson${lessonNumber}.json`
+  )
 
-  console.log(`Created: ${jsonOutputPath}`)
+  await fs.writeFile(
+    outputPath,
+    JSON.stringify(
+      flashcards,
+      null,
+      2
+    )
+  )
+
+  console.log(
+    `Created: ${outputPath}`
+  )
 }
 
 main().catch((err) => {
   console.error(err)
   process.exit(1)
 })
+
+function logUsage(stepName, response) {
+  const usage = response.usage
+
+  if (!usage) {
+    console.log(`${stepName}: no usage data`)
+    return
+  }
+
+  console.log(`
+========== ${stepName} ==========
+Prompt tokens: ${usage.prompt_tokens}
+Completion tokens: ${usage.completion_tokens}
+Total tokens: ${usage.total_tokens}
+================================
+`)
+}
