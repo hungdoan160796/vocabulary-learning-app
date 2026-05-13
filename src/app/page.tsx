@@ -3,17 +3,13 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
 
-const USERS = [
-  "A Hoài"
-]
-
 export default function HomePage() {
   const router = useRouter()
 
   const [selectedUser, setSelectedUser] = useState("")
 
   useEffect(() => {
-    const cached = localStorage.getItem("learner_id")
+    const cached = localStorage.getItem("learnerId")
 
     if (cached) {
       router.push("/lessons")
@@ -23,7 +19,7 @@ export default function HomePage() {
   const handleContinue = () => {
     if (!selectedUser) return
 
-    localStorage.setItem("learner_id", selectedUser)
+    localStorage.setItem("learnerId", selectedUser)
 
     router.push("/lessons")
   }
@@ -34,20 +30,16 @@ export default function HomePage() {
         <h1 className="mb-6 text-center text-3xl font-bold">
           Select Learner
         </h1>
+        <p className="mb-4 text-center text-gray-600">
+          Please enter your learner ID.
+        </p>
 
-        <select
+        <input
+          type="text"
           value={selectedUser}
           onChange={(e) => setSelectedUser(e.target.value)}
           className="w-full rounded-xl border p-4"
-        >
-          <option value="">Choose learner</option>
-
-          {USERS.map((user) => (
-            <option key={user} value={user}>
-              {user}
-            </option>
-          ))}
-        </select>
+        ></input>
 
         <button
           onClick={handleContinue}

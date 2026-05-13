@@ -41,13 +41,13 @@ After selection:
 Use browser local storage:
 
 ```ts
-localStorage.setItem("learner_id", selectedId)
+localStorage.setItem("learnerId", selectedId)
 ```
 
 On app load:
 
 ```ts
-const cached = localStorage.getItem("learner_id")
+const cached = localStorage.getItem("learnerId")
 ```
 
 If cached value exists:
@@ -66,7 +66,7 @@ Change User
 This clears cache:
 
 ```ts
-localStorage.removeItem("learner_id")
+localStorage.removeItem("learnerId")
 ```
 
 ---

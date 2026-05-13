@@ -11,6 +11,7 @@
   "dependencies": {
     "dotenv": "^17.4.2",
     "framer-motion": "^11.0.0",
+    "fs": "^0.0.1-security",
     "gray-matter": "^4.0.3",
     "next": "16.2.6",
     "openai": "^6.37.0",

@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 
-const STORAGE_KEY = "learner_id"
+const STORAGE_KEY = "learnerId"
 
 export function useLocalUser() {
   const [learnerId, setLearnerId] = useState<string | null>(null)

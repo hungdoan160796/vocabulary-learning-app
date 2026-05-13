@@ -14,13 +14,11 @@ const client = new OpenAI({
 // =========================
 
 const INPUT_DIR =
-  "D:\\teaching-project-1\\data\\overall-improved"
+  "D:\\teaching-project-1\\data\\ahoai\\improved"
 
 const OUTPUT_CONTENT_DIR =
-  "D:\\vocabulary-learning-app\\content"
+  "D:\\vocabulary-learning-app\\content\\ahoai"
 
-const LESSONS_TS_PATH =
-  "D:\\vocabulary-learning-app\\lib\\lessons.ts"
 
 // =========================
 // GET INPUT FILE
@@ -108,15 +106,30 @@ IMPORTANT:
 - Avoid functional words:
   always, often, very, really, etc.
 
-Create a markdown table with EXACTLY these columns:
+Create a JSON file with 15 flashcards based on the following lesson content. Each flashcard should have a sentence with a ___ blank, one correct option that fits naturally, and two wrong options that are believable but incorrect.
 
-| Sentence | Correct option | Wrong option 1 | Wrong option 2 |
+Example output format:
+[
+  {
+    "sentence": "First, I ___ my emails to check for new messages.",
+    "correct": "check",
+    "wrong1": "attend",
+    "wrong2": "finalize"
+  },
+  {
+    "sentence": "Then, I ___ meetings with my team to discuss tasks.",
+    "correct": "attend",
+    "wrong1": "write",
+    "wrong2": "drink"
+  }
+]
 
 Rules:
 - Sentence must contain ___ blank
 - Correct option must fit naturally
 - Wrong options should be believable
-- Generate 20 flashcards
+- Generate 15 flashcards
+- Vocabulary must be extracted from the lesson content
 - Keep vocabulary useful for revision after studying lesson content
 
 Lesson content:
@@ -146,65 +159,22 @@ ${markdown}
   if (!generatedTable) {
     throw new Error("No flashcards generated")
   }
-
   // =========================
-  // WRITE lessonX.ts
-  // =========================
-
-  const lessonTsContent = `
-const ${lessonVariable} = \`
-${generatedTable}
-\`
-
-export default ${lessonVariable}
-`.trim()
-
-  await fs.writeFile(outputPath, lessonTsContent)
-
-  console.log(`Created: ${outputPath}`)
-
-  // =========================
-  // UPDATE lessons.ts
+  // WRITE lessonX.json
   // =========================
 
-  let lessonsTs = await fs.readFile(
-    LESSONS_TS_PATH,
-    "utf-8"
-  )
+  // generatedTable is already JSON from the AI
+  const parsed = JSON.parse(generatedTable)
 
-  // Check import exists
-  const importLine = buildImportLine(lessonNumber)
+  // pretty-print json
+  const jsonContent = JSON.stringify(parsed, null, 2)
 
-  if (!lessonsTs.includes(importLine)) {
-    lessonsTs = `${importLine}\n${lessonsTs}`
-  }
+  // replace .ts -> .json
+  const jsonOutputPath = outputPath.replace(".ts", ".json")
 
-  // Check lesson object exists
-  const lessonId = `id: "lesson${lessonNumber}"`
+  await fs.writeFile(jsonOutputPath, jsonContent)
 
-  if (!lessonsTs.includes(lessonId)) {
-    // Try inserting into lessons array
-    lessonsTs = lessonsTs.replace(
-      /(\[\s*)([\s\S]*?)(\s*\])/m,
-      (match, start, middle, end) => {
-        return `${start}${middle.trim()}
-  ${buildLessonObject(lessonNumber)},
-${end}`
-      }
-    )
-
-    console.log(
-      `Added lesson${lessonNumber} to lessons.ts`
-    )
-  } else {
-    console.log(
-      `lesson${lessonNumber} already exists in lessons.ts`
-    )
-  }
-
-  await fs.writeFile(LESSONS_TS_PATH, lessonsTs)
-
-  console.log("Updated lessons.ts")
+  console.log(`Created: ${jsonOutputPath}`)
 }
 
 main().catch((err) => {

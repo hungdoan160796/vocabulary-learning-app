@@ -5,16 +5,17 @@ import Link from "next/link"
 import { Lesson } from "../types/lesson"
 
 interface Props {
+  learnerId: string;
   lessons: Lesson[]
 }
 
-export default function LessonCarousel({ lessons }: Props) {
+export default function LessonCarousel({ lessons, learnerId }: Props) {
   return (
     <div className="flex snap-x gap-4 overflow-x-auto pb-4">
       {lessons.map((lesson) => (
         <Link
           key={lesson.id}
-          href={`/lessons/${lesson.id}`}
+          href={`/lessons/${lesson.id}?learnerId=${learnerId}`}
           className="min-w-70 snap-center rounded-3xl bg-white p-6 shadow-lg"
         >
           <h2 className="text-2xl font-bold">{lesson.title}</h2>
