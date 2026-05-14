@@ -12,8 +12,6 @@ export default function LessonsPage() {
     async function loadLessons() {
       const storedLearnerId = localStorage.getItem("learnerId")
 
-      console.log("storedLearnerId:", storedLearnerId)
-
       if (!storedLearnerId) return
 
       setLearnerId(storedLearnerId)
@@ -27,8 +25,6 @@ export default function LessonsPage() {
         if (!res.ok) {
           throw new Error("Failed")
         }
-
-        console.log("lessons:", data)
 
         setLessons(data)
       } catch (err) {
