@@ -11,8 +11,6 @@ export async function GET(req: Request) {
 
     const learnerId = searchParams.get("learnerId")
 
-    console.log("Loading lessons for learner:", learnerId)
-
     if (!learnerId) {
       return NextResponse.json(
         { error: "Missing learnerId" },
@@ -26,8 +24,6 @@ export async function GET(req: Request) {
       learnerId
     )
 
-    console.log("Looking for lessons in:", lessonsDir)
-
     if (!fs.existsSync(lessonsDir)) {
       return NextResponse.json(
         { error: "Learner folder not found" },
@@ -35,16 +31,10 @@ export async function GET(req: Request) {
       )
     }
 
-    console.log("Found lessons folder for learner:", learnerId)
-
     // get json files
     const files = fs
       .readdirSync(lessonsDir)
       .filter((file) => file.endsWith(".json"))
-
-    console.log(
-      `Found ${files.length} lesson(s) for learner ${learnerId}`
-    )
 
     const lessons = files.map((file) => {
       const filePath = path.join(lessonsDir, file)
@@ -59,8 +49,6 @@ export async function GET(req: Request) {
         cards,
       }
     })
-
-    console.log("Parsed lessons:", lessons)
 
     return NextResponse.json(lessons)
   } catch (error) {

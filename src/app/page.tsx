@@ -7,6 +7,7 @@ export default function HomePage() {
   const router = useRouter()
 
   const [selectedUser, setSelectedUser] = useState("")
+  const [error, setError] = useState("")
 
   useEffect(() => {
     const cached = localStorage.getItem("learnerId")
@@ -16,20 +17,45 @@ export default function HomePage() {
     }
   }, [router])
 
-  const handleContinue = () => {
+  const handleContinue = async () => {
     if (!selectedUser) return
 
-    localStorage.setItem("learnerId", selectedUser)
+    setError("")
 
-    router.push("/lessons")
+    try {
+      const res = await fetch("/api/check-user", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          learnerId: selectedUser,
+        }),
+      })
+
+      const data = await res.json()
+
+      if (!data.exists) {
+        setError("Wrong ID")
+        return
+      }
+
+      localStorage.setItem("learnerId", selectedUser)
+
+      router.push("/lessons")
+    } catch (err) {
+      console.error(err)
+      setError("Something went wrong")
+    }
   }
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-6">
       <div className="w-full max-w-sm rounded-3xl bg-white p-6 shadow-xl">
-        <h1 className="mb-6 text-center text-3xl font-bold">
+        <h1 className="mb-6 text-center text-7xl font-bold">
           Select Learner
         </h1>
+
         <p className="mb-4 text-center text-gray-600">
           Please enter your learner ID.
         </p>
@@ -37,9 +63,18 @@ export default function HomePage() {
         <input
           type="text"
           value={selectedUser}
-          onChange={(e) => setSelectedUser(e.target.value)}
+          onChange={(e) => {
+            setSelectedUser(e.target.value)
+            setError("")
+          }}
           className="w-full rounded-xl border p-4"
-        ></input>
+        />
+
+        {error && (
+          <p className="mt-3 text-center text-sm text-red-500">
+            {error}
+          </p>
+        )}
 
         <button
           onClick={handleContinue}

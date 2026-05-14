@@ -31,10 +31,8 @@ export async function GET(
     )
     await fs.access(filePath)
     const fileContents = await fs.readFile(filePath, "utf-8")
-    console.log("Loaded lesson file:", filePath)
 
     const cards = JSON.parse(fileContents)
-    console.log(cards)
 
     return NextResponse.json({
         id: lessonId,
