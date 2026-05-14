@@ -77,22 +77,21 @@ TASK:
 Generate a JSON array of useful vocabulary words from the lesson.
 
 RULES:
-- Include only meaningful vocabulary
+- Pick only words/phrases from the lesson
 - Pick about 10-20 words/phrases
 - Prefer:
   nouns, verbs, adjectives, phrases
 - Avoid:
   function words, grammar words, filler words, names of people/places/brands
-- Prioritize words that are important for understanding the lesson content
 - The array must not contain duplicates
 - Output ONLY valid JSON array
 - No markdown
 
 Example:
 [
-  "deadline",
-  "schedule",
-  "submit report"
+  "how are you?",
+  "What's going on?",
+  "going up?"
 ]
 
 Lesson:
@@ -189,16 +188,16 @@ TASK:
 Convert each object into this format:
 
 {
-  "sentence": "First, I ___ my emails.",
-  "correct": "check",
-  "wrong1": "attend",
-  "wrong2": "finalize"
+  "sentence": "How's it going?. ___",
+  "correct": "I'm good, how are you?",
+  "wrong1": "I'm fine too.",
+  "wrong2": "It's ok."
 }
 
 RULES:
-- Replace ONLY the correct word with ___
+- Replace ONLY the correct word/phrases with ___
 - wrong answers must not be synonyms of the correct word, or acceptably close in meaning
-- If original sentence is too long, simplify the sentence but keep the same meaning and the target word
+- If original sentence is too long, simplify the sentence but keep the same meaning and the target word/phrase
 - Output ONLY valid JSON array
 - No markdown
 

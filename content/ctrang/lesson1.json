@@ -1,0 +1,92 @@
+[
+  {
+    "sentence": "___! The sun is bright today!",
+    "correct": "Good morning",
+    "wrong1": "Good night",
+    "wrong2": "Goodbye"
+  },
+  {
+    "sentence": "___, Grandma! You just woke up?",
+    "correct": "Good afternoon",
+    "wrong1": "Good night",
+    "wrong2": "Good morning"
+  },
+  {
+    "sentence": "___, Mr. Where are we having dinner?",
+    "correct": "Good evening",
+    "wrong1": "Good afternoon",
+    "wrong2": "Good night"
+  },
+  {
+    "sentence": "Hey! ___?",
+    "correct": "How’s it going",
+    "wrong1": "What’s it doing",
+    "wrong2": "Where’s it going"
+  },
+  {
+    "sentence": "___ again!",
+    "correct": "Good to see you",
+    "wrong1": "Good to meet you",
+    "wrong2": "Good to hear you"
+  },
+  {
+    "sentence": "___?",
+    "correct": "How’s the family",
+    "wrong1": "Where’s the family",
+    "wrong2": "Who’s the family"
+  },
+  {
+    "sentence": "___?",
+    "correct": "What’s going on",
+    "wrong1": "What’s going off",
+    "wrong2": "What’s going up"
+  },
+  {
+    "sentence": "___?",
+    "correct": "How are you feeling",
+    "wrong1": "How are you going",
+    "wrong2": "How are you looking"
+  },
+  {
+    "sentence": "___?",
+    "correct": "How’s everything",
+    "wrong1": "How’s anyone",
+    "wrong2": "How’s nothing"
+  },
+  {
+    "sentence": "___?",
+    "correct": "What have you been up to",
+    "wrong1": "What have you been down to",
+    "wrong2": "What have you been out to"
+  },
+  {
+    "sentence": "____ for the elevator?",
+    "correct": "waiting",
+    "wrong1": "standing",
+    "wrong2": "sitting"
+  },
+  {
+    "sentence": "Nice weather today, ___?",
+    "correct": "isn't it",
+    "wrong1": "is it",
+    "wrong2": "does it"
+  },
+  {
+    "sentence": "__ you later! See you around!",
+    "correct": "catch",
+    "wrong1": "get",
+    "wrong2": "see"
+  },
+  {
+    "sentence": "How ___ your weekend last Friday?",
+    "correct": "was",
+    "wrong1": "will",
+    "wrong2": "will be"
+  },
+  {
+    "sentence": " ___ to see a movie this weekend.",
+    "correct": "I'm going",
+    "wrong1": "I'll",
+    "wrong2": "I'll going"
+  }
+]
