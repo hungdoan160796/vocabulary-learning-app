@@ -1,0 +1,92 @@
+[
+  {
+    "sentence": "The development team plans to ___ coding on Friday as soon as the designs are approved.",
+    "correct": "start",
+    "wrong1": "finish",
+    "wrong2": "cancel"
+  },
+  {
+    "sentence": "We’re seeing a ___ with the data pipeline that is stopping progress.",
+    "correct": "blocker",
+    "wrong1": "feature",
+    "wrong2": "deadline"
+  },
+  {
+    "sentence": "The client gave mostly positive ___ on the homepage mockups.",
+    "correct": "feedback",
+    "wrong1": "requests",
+    "wrong2": "deadlines"
+  },
+  {
+    "sentence": "There’s a ___ we’ll miss the deadline if issues continue.",
+    "correct": "risk",
+    "wrong1": "promise",
+    "wrong2": "plan"
+  },
+  {
+    "sentence": "If you don’t understand, please ask me to ___ you through the process again.",
+    "correct": "walk",
+    "wrong1": "skip",
+    "wrong2": "ignore"
+  },
+  {
+    "sentence": "Numbers are ___ up, indicating improved sales performance.",
+    "correct": "trending",
+    "wrong1": "falling",
+    "wrong2": "stopping"
+  },
+  {
+    "sentence": "We might have ___ something important in the last meeting.",
+    "correct": "missed",
+    "wrong1": "changed",
+    "wrong2": "added"
+  },
+  {
+    "sentence": "To solve this issue, we need to ___ it to a higher authority.",
+    "correct": "escalate",
+    "wrong1": "ignore",
+    "wrong2": "delay"
+  },
+  {
+    "sentence": "The moving company confirmed the ___ as Tuesday, for relocating the office.",
+    "correct": "schedule",
+    "wrong1": "budget",
+    "wrong2": "location"
+  },
+  {
+    "sentence": "Employees have packed their ___ in preparation for the office move.",
+    "correct": "equipment",
+    "wrong1": "requests",
+    "wrong2": "deadlines"
+  },
+  {
+    "sentence": "Internet installation at the new office may be ___ by two days.",
+    "correct": "delayed",
+    "wrong1": "completed",
+    "wrong2": "accelerated"
+  },
+  {
+    "sentence": "IT staff will ___ computers on Monday evening to reduce downtime during the move.",
+    "correct": "disconnect",
+    "wrong1": "upgrade",
+    "wrong2": "install"
+  },
+  {
+    "sentence": "Before we finish, could you please ___ the action items discussed in the meeting?",
+    "correct": "recap",
+    "wrong1": "ignore",
+    "wrong2": "delay"
+  },
+  {
+    "sentence": "The schedule may be ___ back if the client requests more changes.",
+    "correct": "pushed",
+    "wrong1": "shortened",
+    "wrong2": "ignored"
+  },
+  {
+    "sentence": "If something isn’t clear on your end, you should say, 'I’m not ___ .'",
+    "correct": "following",
+    "wrong1": "catching",
+    "wrong2": "hearing"
+  }
+]
