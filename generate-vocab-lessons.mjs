@@ -14,10 +14,10 @@ const client = new OpenAI({
 // =========================
 
 const INPUT_DIR =
-  "E:\\teaching-project-1\\data\\ahoai\\improved"
+  "D:\\teaching-project-1\\data\\ctrang\\improved"
 
 const OUTPUT_CONTENT_DIR =
-  "E:\\vocabulary-learning-app\\content\\ahoai"
+  "D:\\vocabulary-learning-app\\content\\ctrang"
 
 // =========================
 // GET INPUT FILE
@@ -271,15 +271,6 @@ async function main() {
     `lesson${lessonNumber}-vocabularyList.json`
   )
 
-  await fs.writeFile(
-    vocabDebugPath,
-    JSON.stringify(
-      vocabularyList,
-      null,
-      2
-    )
-  )
-
   // =========================
   // STEP 2
   // Locate vocab sentences
@@ -301,15 +292,6 @@ async function main() {
     `lesson${lessonNumber}-sentences.json`
   )
 
-  await fs.writeFile(
-    sentenceDebugPath,
-    JSON.stringify(
-      sentenceObjects,
-      null,
-      2
-    )
-  )
-
   // =========================
   // STEP 3
   // Generate flashcards
@@ -327,7 +309,8 @@ async function main() {
   // =========================
   // WRITE OUTPUT
   // =========================
-
+  
+  if (!outputPath) fs.create()
   const outputPath = path.join(
     OUTPUT_CONTENT_DIR,
     `lesson${lessonNumber}.json`
