@@ -72,11 +72,19 @@ export default function LessonPage() {
           />
         </SwipeContainer>
         <div className="flex justify-center items-center lg:min-h-[10vh] min-h-[10vh]">
-          
+          <div className="w-10"></div>
+          <button onClick={prev} className="lg:text-2xl text-4xl mr-4 rounded-xl p-4 min-width-[20vw]">
+            Previous
+          </button>
+          <div className="w-10"></div>
           <button onClick={() => window.history.back()} className="lg:text-3xl text-5xl rounded-xl lg:p-4 p-12 min-width-[20vw] bg-white shadow-xl">
               Back to lessons
           </button>
-          
+          <div className="w-10"></div>
+          <button onClick={next} className="lg:text-2xl text-4xl mr-4 rounded-xl p-4 min-width-[20vw]">
+            Next
+          </button>
+          <div className="w-10"></div>
         </div>
       </div>
     </div>
