@@ -26,11 +26,13 @@ export default function OptionButton({
     <button
       onClick={onClick}
       className={`
-        w-full
+        lg:w-[40vw]
+        w-[80vw]
+        lg:text-4xl
+        text-7xl 
         rounded-2xl
         border
         p-4
-        text-lg
         font-medium
         transition-all
         active:scale-[0.98]

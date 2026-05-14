@@ -138,24 +138,22 @@ export default function LessonCard({ card }: Props) {
   }, [card])
 
   return (
-    <div className="flex min-h-[70vh] flex-col justify-center gap-8 rounded-3xl bg-white p-6 shadow-xl">
-      
-      {/* Sentence */}
-      <div className="flex items-center justify-center gap-3">
-        <h2 className="text-center text-2xl font-bold leading-relaxed">
-          {card.sentence}
-        </h2>
-
+    <div className="lg:min-h-[60vh] min-h-[60vh] flex flex-col justify-start rounded-3xl bg-white lg:p-4 pb-20 shadow-xl">
         <button
           onClick={() => speakSentenceWithHiddenWord(card.sentence, card.correct)}
-          className="rounded-full p-2 transition hover:bg-gray-100"
+          className="w-fit rounded-full transition hover:bg-gray-100 gap-4 lg:p-4 px-12 pt-12"
         >
-          <Volume2 className="h-6 w-6" />
+          <Volume2 className="lg:h-[40] lg:w-[40] h-[100] w-[100]" />
         </button>
+      {/* Sentence */}
+      <div className="flex items-center justify-center gap-4 lg:p-4 p-20">
+        <h2 className="text-center lg:text-4xl text-7xl font-bold leading-relaxed">
+          {card.sentence}
+        </h2>
       </div>
 
       {/* Options */}
-      <div className="space-y-4">
+      <div className="w-fullspace-y-4 flex flex-col items-center lg:gap-4 gap-12">
         {options.map((option) => {
           const state =
             selectedOption === option
@@ -167,7 +165,7 @@ export default function LessonCard({ card }: Props) {
           return (
             <div
               key={option}
-              className="flex items-center gap-2"
+              className="flex flex-col items-center gap-2"
             >
               <div className="flex-1">
                 <OptionButton
@@ -176,13 +174,6 @@ export default function LessonCard({ card }: Props) {
                   state={state}
                 />
               </div>
-
-              <button
-                onClick={() => speak(option)}
-                className="rounded-full p-2 transition hover:bg-gray-100"
-              >
-                <Volume2 className="h-5 w-5" />
-              </button>
             </div>
           )
         })}
