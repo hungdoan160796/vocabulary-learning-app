@@ -15,101 +15,23 @@ interface Props {
 export default function LessonCard({ card }: Props) {
   const [selectedOption, setSelectedOption] = useState<string | null>(null)
   const [completed, setCompleted] = useState(false)
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(null)
+  const getAudioPath = (type: 1 | 2) => {
+    const safeCorrect = card.correct
+      .toLowerCase()
+      .replace(/\s+/g, "-")
 
-  const speak = async (text: string) => {
-    window.speechSynthesis.cancel()
-
-    // split sentence at ___
-    const parts = text.split("___")
-
-    const voices = window.speechSynthesis.getVoices()
-
-    // pick a voice
-    const selectedVoice =
-      voices.find((voice) =>
-        voice.name.includes("Microsoft Mark - English (United States)")
-      ) || voices[0]
-
-    const speakPart = (part: string) => {
-      return new Promise<void>((resolve) => {
-        if (!part.trim()) {
-          resolve()
-          return
-        }
-
-        const utterance = new SpeechSynthesisUtterance(part)
-        utterance.voice = selectedVoice
-
-        utterance.lang = "en-US"
-        utterance.rate = 1
-        utterance.pitch = 1
-
-        utterance.onend = () => resolve()
-
-        window.speechSynthesis.speak(utterance)
-      })
-    }
-
-    for (let i = 0; i < parts.length; i++) {
-      await speakPart(parts[i])
-
-      // pause after ___
-      if (i < parts.length - 1) {
-        await new Promise((resolve) => setTimeout(resolve, 500))
-      }
-    }
+    return `/audio/lesson-1/flashcard-${safeCorrect}${type}.mp3`
   }
 
-  const speakSentenceWithHiddenWord = (
-    sentence: string,
-    hiddenWord: string
-  ) => {
-    window.speechSynthesis.cancel()
+  const playAudio = (src: string) => {
+    audio?.pause()
 
-    const parts = sentence.split("___")
+    const nextAudio = new Audio(src)
 
-    const before = parts[0] ?? ""
-    const after = parts[1] ?? ""
+    nextAudio.play()
 
-    const voices = window.speechSynthesis.getVoices()
-
-    const voice =
-      voices.find((v) =>
-        v.name.includes("Microsoft Mark - English (United States)")
-      ) || voices[0]
-
-    // before blank
-    const beforeUtterance = new SpeechSynthesisUtterance(before)
-    beforeUtterance.voice = voice
-    beforeUtterance.lang = "en-US"
-
-    // hidden answer (quiet)
-    const hiddenUtterance = new SpeechSynthesisUtterance(hiddenWord)
-    hiddenUtterance.voice = voice
-    hiddenUtterance.lang = "en-US"
-    hiddenUtterance.volume = 0.05
-
-    // after blank
-    const afterUtterance = new SpeechSynthesisUtterance(after)
-    afterUtterance.voice = voice
-    afterUtterance.lang = "en-US"
-
-    // estimate word duration
-    // ~180 words/minute average speech
-    const estimatedMs =
-      Math.max(hiddenWord.split(" ").length * 350, 500)
-
-    beforeUtterance.onend = () => {
-      // speak hidden word quietly
-      window.speechSynthesis.speak(hiddenUtterance)
-
-      // wait roughly same duration as word speech
-      setTimeout(() => {
-        window.speechSynthesis.speak(afterUtterance)
-      }, estimatedMs)
-    }
-
-    window.speechSynthesis.speak(beforeUtterance)
+    setAudio(nextAudio)
   }
 
   const handleSelect = (option: string) => {
@@ -117,17 +39,16 @@ export default function LessonCard({ card }: Props) {
 
     setSelectedOption(option)
 
-    if (option === card.correct) {
-      setCompleted(true)
-
-      // speak full correct sentence
-      const fullSentence = card.sentence.replace(
-        "___",
-        card.correct
-      )
-
-      speak(fullSentence)
+    // wrong answer
+    if (option !== card.correct) {
+      return
     }
+
+    // correct answer
+    setCompleted(true)
+
+    // play filled sentence audio
+    playAudio(getAudioPath(2))
   }
   const options = useMemo(() => {
     return shuffle([
@@ -140,10 +61,11 @@ export default function LessonCard({ card }: Props) {
   return (
     <div className="lg:min-h-[60vh] min-h-[60vh] flex flex-col justify-start rounded-3xl lg:p-4 pb-20 shadow-xl">
         <button
-          onClick={() => speakSentenceWithHiddenWord(card.sentence, card.correct)}
+          onClick={() => playAudio(getAudioPath(1))}
           className="w-fit rounded-full transition gap-4 lg:p-4 px-12 pt-12"
         >
           <Volume2 className="lg:h-[40] lg:w-[40] h-[100] w-[100]" />
+          <div></div>
         </button>
       {/* Sentence */}
       <div className="flex items-center justify-center gap-4 lg:p-4 p-20">
