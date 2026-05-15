@@ -1,6 +1,7 @@
 import "./globals.css"
 
-import type { Metadata } from "next"
+import type { Metadata } from "next";
+import { ThemeProvider } from "../../components/ThemeProvider";
 
 export const metadata: Metadata = {
   title: "Memrise Alike",
@@ -14,8 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-gray-100 text-black">
+      <body className="">
+        <ThemeProvider>
         {children}
+        </ThemeProvider>
       </body>
     </html>
   )

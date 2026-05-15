@@ -138,10 +138,10 @@ export default function LessonCard({ card }: Props) {
   }, [card])
 
   return (
-    <div className="lg:min-h-[60vh] min-h-[60vh] flex flex-col justify-start rounded-3xl bg-white lg:p-4 pb-20 shadow-xl">
+    <div className="lg:min-h-[60vh] min-h-[60vh] flex flex-col justify-start rounded-3xl lg:p-4 pb-20 shadow-xl">
         <button
           onClick={() => speakSentenceWithHiddenWord(card.sentence, card.correct)}
-          className="w-fit rounded-full transition hover:bg-gray-100 gap-4 lg:p-4 px-12 pt-12"
+          className="w-fit rounded-full transition gap-4 lg:p-4 px-12 pt-12"
         >
           <Volume2 className="lg:h-[40] lg:w-[40] h-[100] w-[100]" />
         </button>

@@ -18,7 +18,7 @@ export default function OptionButton({
         return "bg-red-500 text-white border-red-500"
 
       default:
-        return "bg-white text-black border-gray-300"
+        return "text-black border-gray-300"
     }
   }
 

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { useRouter } from "next/navigation"
+import { ThemeToggle} from "../../components/ThemeToggle"
 
 export default function HomePage() {
   const router = useRouter()
@@ -51,7 +52,8 @@ export default function HomePage() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-center p-6">
-      <div className="w-full max-w-sm rounded-3xl bg-white p-6 shadow-xl">
+      <ThemeToggle />
+      <div className="w-full max-w-sm rounded-3xl p-6 shadow-xl">
         <h1 className="mb-6 text-center text-7xl font-bold">
           Select Learner
         </h1>
@@ -78,7 +80,7 @@ export default function HomePage() {
 
         <button
           onClick={handleContinue}
-          className="mt-6 w-full rounded-xl bg-black p-4 text-white"
+          className="mt-6 w-full rounded-xl p-4 text-white"
         >
           Continue
         </button>
