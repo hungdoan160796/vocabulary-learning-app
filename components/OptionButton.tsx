@@ -12,13 +12,13 @@ export default function OptionButton({
   const getClass = () => {
     switch (state) {
       case "correct":
-        return "bg-green-500 text-white border-green-500"
+        return "bg-green-500 border-green-500"
 
       case "wrong":
-        return "bg-red-500 text-white border-red-500"
+        return "bg-red-500 border-red-500"
 
       default:
-        return "text-black border-gray-300"
+        return "border-gray-300"
     }
   }
 

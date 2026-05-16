@@ -2,22 +2,35 @@
 
 import { useEffect, useMemo, useState } from "react"
 import { useParams, useSearchParams } from "next/navigation"
-
+import { Volume2, VolumeX } from "lucide-react"
 import LessonCard from "../../../../components/LessonCards"
 import SwipeContainer from "../../../../components/SwipeContainer"
 import { Lesson } from "../../../../types/lesson"
+import { ThemeToggle } from "../../../../components/ThemeToggle"
 
 export default function LessonPage() {
   const params = useParams()
   const searchParams = useSearchParams()
-
+  const learnerId = searchParams.get("learnerId")
+  const [soundEnabled, setSoundEnabled] = useState(true)
   const [lesson, setLesson] = useState<Lesson | null>(null)
   const [currentIndex, setCurrentIndex] = useState(0)
+  useEffect(() => {
+    const saved = localStorage.getItem("lesson-sound-enabled")
 
+    if (saved !== null) {
+      setSoundEnabled(saved === "true")
+    }
+  }, [])
+  const toggleSound = () => {
+    const next = !soundEnabled
+
+    setSoundEnabled(next)
+    localStorage.setItem("lesson-sound-enabled", String(next))
+  }
   useEffect(() => {
     async function loadLesson() {
       try {
-        const learnerId = searchParams.get("learnerId")
 
         const res = await fetch(
           `/api/lessons/${params.id}?learnerId=${learnerId}`
@@ -56,19 +69,31 @@ export default function LessonPage() {
   return (
 
     <div className="w-full flex flex-col justify-center items-center min-w-100 p-6">
+    
       <div className="lg:w-full lg:max-w-200 w-full lg:max-h-screen h-screen flex flex-col justify-start">
         <div className="lg:h-[15vh] h-[10vh] mb-4 flex items-center justify-between p-8 rounded-xl shadow-lg">
-          <h1 className="lg:text-4xl text-7xl font-bold lg:p-4 p-12">{lesson.title}</h1>
 
           <p className="lg:text-xl text-3xl mt-4 text-gray-600 lg:px-4 px-12">
             {currentIndex + 1} / {lesson.cards.length}
           </p>
+          
+            <button
+              onClick={toggleSound}
+              className="rounded-xl lg:p-4 p-8 shadow-lg"
+            >
+              {soundEnabled ? (
+                <Volume2 className="lg:w-10 lg:h-10 w-16 h-16" />
+              ) : (
+                <VolumeX className="lg:w-10 lg:h-10 w-16 h-16" />
+              )}
+            </button>
         </div>
 
         <SwipeContainer onNext={next} onPrev={prev}>
           <LessonCard
             key={currentIndex}
             card={lesson.cards[currentIndex]}
+            soundEnabled={soundEnabled}
           />
         </SwipeContainer>
         <div className="flex justify-center items-center lg:min-h-[10vh] min-h-[10vh]">

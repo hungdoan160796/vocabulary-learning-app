@@ -6,6 +6,8 @@ import dotenv from "dotenv"
 
 dotenv.config()
 
+const API_KEY = process.env.ELEVENLABS_API_KEY!
+    
 const VOICES = [
   process.env.VOICE_ID_ALICE!,
   process.env.VOICE_ID_BELLE!,
@@ -13,6 +15,50 @@ const VOICES = [
   process.env.VOICE_ID_ROGER!,
   process.env.VOICE_ID_LIAM!,
 ]
+
+  async function generateSpeech(
+    voiceId: string,
+    text: string,
+    outputPath: string
+  ) {
+      const response = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`,
+      {
+        method: "POST",
+        headers: {
+          "xi-api-key": API_KEY,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          text,
+          model_id: "eleven_multilingual_v2",
+
+          // pause optimization
+          voice_settings: {
+            stability: 0.4,
+            similarity_boost: 0.8,
+          }
+        }),
+      }
+    )
+
+    if (!response.ok) {
+      console.log(response.status)
+      throw new Error(
+        `ElevenLabs failed: ${response.status}`
+      )
+    }
+
+    const arrayBuffer = await response.arrayBuffer()
+
+    fs.mkdirSync(path.dirname(outputPath), {
+      recursive: true,
+    })
+
+    fs.writeFileSync(
+      outputPath,
+      Buffer.from(arrayBuffer)
+    )
+  }
 
 function getRandomVoiceId() {
   const randomIndex = Math.floor(
@@ -23,9 +69,6 @@ function getRandomVoiceId() {
   return voice
 }
 
-const API_KEY = process.env.ELEVENLABS_API_KEY!
-const voiceId = getRandomVoiceId();
-
 type Flashcard = {
   sentence: string
   correct: string
@@ -33,53 +76,11 @@ type Flashcard = {
   wrong2: string
 }
 
-async function generateSpeech(
-  text: string,
-  outputPath: string
-) {
-    const response = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`,
-    {
-      method: "POST",
-      headers: {
-        "xi-api-key": API_KEY,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        text,
-        model_id: "eleven_multilingual_v2",
-
-        // pause optimization
-        voice_settings: {
-          stability: 0.4,
-          similarity_boost: 0.8,
-        }
-      }),
-    }
-  )
-
-  if (!response.ok) {
-    throw new Error(
-      `ElevenLabs failed: ${response.status}`
-    )
-  }
-
-  const arrayBuffer = await response.arrayBuffer()
-
-  fs.mkdirSync(path.dirname(outputPath), {
-    recursive: true,
-  })
-
-  fs.writeFileSync(
-    outputPath,
-    Buffer.from(arrayBuffer)
-  )
-}
-
 function buildPauseSentence(sentence: string) {
   // SSML-like natural pause
   return sentence.replace(
     "___",
-    "... "
+    '<break time="1.0s"/>'
   )
 }
 
@@ -91,11 +92,14 @@ function buildAnswerSentence(
 }
 
 async function run() {
-  const inputFile = process.argv[2]
+  
+  const username = process.argv[2]
+  const file = process.argv[3]
+  const inputFile = path.join(process.cwd(), "content", username, file)
 
-  if (!inputFile) {
+  if (!inputFile || !username) {
     console.error(
-      "Usage: npx tsx scripts/generateNarrations.ts lesson1.json"
+      "Usage: npx tsx scripts/generateNarrations.ts ahoai lesson1.json"
     )
     process.exit(1)
   }
@@ -113,10 +117,14 @@ async function run() {
     process.cwd(),
     "public",
     "audio",
+    username,
     lessonName
   )
 
   for (const card of cards) {
+
+  const voiceId = getRandomVoiceId();
+
     const safeCorrect = card.correct
       .toLowerCase()
       .replace(/\s+/g, "-")
@@ -147,6 +155,7 @@ async function run() {
     } else {
     console.log("Generating:", output1)
     await generateSpeech(
+        voiceId,
         pauseSentence,
         output1
     )
@@ -156,6 +165,7 @@ async function run() {
     } else {
     console.log("Generating:", output2)
     await generateSpeech(
+        voiceId,
         answerSentence,
         output2
     )
