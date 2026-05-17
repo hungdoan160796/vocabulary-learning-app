@@ -148,7 +148,7 @@ export default function LessonCard({
   }, [card])
 
   return (
-    <div className="lg:min-h-[60vh] min-h-[60vh] flex flex-col justify-start rounded-3xl lg:p-4 pb-20 shadow-xl">
+    <div className="w-full lg:min-h-[60vh] min-h-[60vh] flex flex-col justify-start rounded-3xl lg:p-4 shadow-xl">
       {/* Replay audio */}
       <button
         onClick={() =>
@@ -158,20 +158,20 @@ export default function LessonCard({
               : getAudioPath(1)
           )
         }
-        className="w-fit rounded-full transition gap-4 lg:p-4 px-12 pt-12"
+        className="w-fit rounded-full transition gap-4 lg:p-4"
       >
-        <Volume2 className="lg:h-[40] lg:w-[40] h-[100] w-[100]" />
+        <Volume2 className="lg:h-[40] lg:w-[40] h-4 w-4 m-4" />
       </button>
 
       {/* Sentence */}
-      <div className="flex items-center justify-center gap-4 lg:p-4 p-20">
-        <h2 className="text-center lg:text-4xl text-7xl font-bold leading-relaxed">
+      <div className="w-full flex items-center justify-center lg:p-4 p-4">
+        <h2 className="text-center lg:text-4xl text-2xl font-bold leading-relaxed">
           {card.sentence}
         </h2>
       </div>
 
       {/* Options */}
-      <div className="w-full space-y-4 flex flex-col items-center lg:gap-4 gap-12">
+      <div className="w-full space-y-4 flex flex-col items-center lg:gap-4">
         {options.map((option) => {
           const state =
             selectedOption === option

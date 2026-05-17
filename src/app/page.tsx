@@ -51,10 +51,9 @@ export default function HomePage() {
   }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-6">
-    
+    <main className="w-full flex min-h-screen flex-col items-center justify-center p-6">
       <div className="w-full max-w-sm rounded-3xl p-6 shadow-xl">
-        <h1 className="mb-6 text-center text-7xl font-bold">
+        <h1 className="mb-6 text-center text-4xl font-bold">
           Select Learner
         </h1>
 

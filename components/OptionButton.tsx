@@ -27,9 +27,9 @@ export default function OptionButton({
       onClick={onClick}
       className={`
         lg:w-[40vw]
-        w-[80vw]
-        lg:text-4xl
-        text-7xl 
+        w-60
+        lg:text-3xl
+        text-1xl 
         rounded-2xl
         border
         p-4

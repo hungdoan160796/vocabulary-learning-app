@@ -68,27 +68,25 @@ export default function LessonPage() {
 
   return (
 
-    <div className="w-full flex flex-col justify-center items-center min-w-100 p-6">
-    
-      <div className="lg:w-full lg:max-w-200 w-full lg:max-h-screen h-screen flex flex-col justify-start">
-        <div className="lg:h-[15vh] h-[10vh] mb-4 flex items-center justify-between p-8 rounded-xl shadow-lg">
+    <div className="w-full flex flex-col justify-center items-start min-w-100">
+      <div className="absolute top-0 left-0 w-full h-[10vh] mb-4 flex items-center justify-between p-8 rounded-xl shadow-lg">
 
-          <p className="lg:text-xl text-3xl mt-4 text-gray-600 lg:px-4 px-12">
-            {currentIndex + 1} / {lesson.cards.length}
-          </p>
-          
-            <button
-              onClick={toggleSound}
-              className="rounded-xl lg:p-4 p-8 shadow-lg"
-            >
-              {soundEnabled ? (
-                <Volume2 className="lg:w-10 lg:h-10 w-16 h-16" />
-              ) : (
-                <VolumeX className="lg:w-10 lg:h-10 w-16 h-16" />
-              )}
-            </button>
-        </div>
-
+        <p className="lg:text-3xl text-xl text-gray-600">
+          {currentIndex + 1} / {lesson.cards.length}
+        </p>
+        
+          <button
+            onClick={toggleSound}
+            className="rounded-xl"
+          >
+            {soundEnabled ? (
+              <Volume2 className="lg:w-10 lg:h-10 w-4 h-4" />
+            ) : (
+              <VolumeX className="lg:w-10 lg:h-10 w-4 h-4" />
+            )}
+          </button>
+      </div>
+      <div className="absolute top-[10vh] h-[66vh] left-0 w-full lg:max-w-200 flex flex-col justify-start scroll-auto">
         <SwipeContainer onNext={next} onPrev={prev}>
           <LessonCard
             key={currentIndex}
@@ -96,23 +94,18 @@ export default function LessonPage() {
             soundEnabled={soundEnabled}
           />
         </SwipeContainer>
-        <div className="flex justify-center items-center lg:min-h-[10vh] min-h-[10vh]">
-          <div className="lg:min-w-40">
-          <button onClick={prev} className="w-full lg:text-3xl text-5xl rounded-xl lg:p-4 p-12 shadow-xl">
+      </div>
+      <div className="absolute bottom-0 left-0 w-full px-4 lg:max-w-200 flex justify-between items-center h-[10vh] m-0 p-0">
+          <button onClick={prev} className="lg:text-3xl rounded-xl lg:p-4 shadow-xl">
             Previous
           </button>
-          </div>
-          <div className="lg:w-40"></div>
-          <button onClick={() => window.history.back()} className="w-full lg:text-3xl text-5xl rounded-xl lg:p-4 p-12 shadow-xl">
+          <button onClick={() => window.history.back()} className="lg:text-3xl rounded-xl lg:p-4 shadow-xl">
               Back to lessons
           </button>
-          <div className="lg:w-40"></div>
-          <div className="lg:min-w-40">
-          <button onClick={next} className="w-full lg:text-3xl text-5xl rounded-xl lg:p-4 p-12 shadow-xl">
+          <button onClick={next} className="lg:text-3xl rounded-xl lg:p-4 shadow-xl">
             Next
-          </button></div>
+          </button>
         </div>
-      </div>
     </div>
   )
 }
