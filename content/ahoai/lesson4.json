@@ -1,0 +1,116 @@
+[
+  {
+    "sentence": "We may need to ___ the reporting module.",
+    "correct": "deprioritize",
+    "wrong1": "expand",
+    "wrong2": "accelerate"
+  },
+  {
+    "sentence": "We need to ___ this with product and marketing before the rollout.",
+    "correct": "align on",
+    "wrong1": "ignore",
+    "wrong2": "delay"
+  },
+  {
+    "sentence": "We should ___ early regarding possible delays.",
+    "correct": "set expectations",
+    "wrong1": "avoid discussion",
+    "wrong2": "cancel"
+  },
+  {
+    "sentence": "Please ___ sales on timeline changes.",
+    "correct": "keep someone in the loop",
+    "wrong1": "exclude",
+    "wrong2": "mislead"
+  },
+  {
+    "sentence": "We should approach this item in ___ instead of launching everything at once.",
+    "correct": "phased approach",
+    "wrong1": "random order",
+    "wrong2": "one step"
+  },
+  {
+    "sentence": "We need to identify and ___ dependencies before development starts.",
+    "correct": "map",
+    "wrong1": "hide",
+    "wrong2": "ignore"
+  },
+  {
+    "sentence": "If we rush this, we’ll accumulate ___ .",
+    "correct": "technical debt",
+    "wrong1": "financial gain",
+    "wrong2": "more features"
+  },
+  {
+    "sentence": "What’s our ___ if the integration fails?",
+    "correct": "fallback plan",
+    "wrong1": "main goal",
+    "wrong2": "priority task"
+  },
+  {
+    "sentence": "From an engineering standpoint, that timeline feels ___.",
+    "correct": "aggressive",
+    "wrong1": "easy",
+    "wrong2": "slow"
+  },
+  {
+    "sentence": "What’s the impact if this ___ by one week?",
+    "correct": "slips",
+    "wrong1": "advances",
+    "wrong2": "improves"
+  },
+  {
+    "sentence": "We should ___ stability rather than speed.",
+    "correct": "optimize for",
+    "wrong1": "ignore",
+    "wrong2": "avoid"
+  },
+  {
+    "sentence": "We’re already operating ___ constraints.",
+    "correct": "under",
+    "wrong1": "without",
+    "wrong2": "above"
+  },
+  {
+    "sentence": "Let’s revisit this once we have more ___.",
+    "correct": "visibility",
+    "wrong1": "confusion",
+    "wrong2": "secrecy"
+  },
+  {
+    "sentence": "Sacrificing quality might lead to unrealistic ___.",
+    "correct": "expectations",
+    "wrong1": "results",
+    "wrong2": "success"
+  },
+  {
+    "sentence": "Please keep sales in the loop on ___ changes.",
+    "correct": "timeline",
+    "wrong1": "color",
+    "wrong2": "location"
+  },
+  {
+    "sentence": "This ___ is a nice to have, not a must-have.",
+    "correct": "feature",
+    "wrong1": "problem",
+    "wrong2": "delay"
+  },
+  {
+    "sentence": "We need to ___ the cause before moving forward.",
+    "correct": "determine",
+    "wrong1": "guess",
+    "wrong2": "ignore"
+  },
+  {
+    "sentence": "___ this task is complete, we will move on.",
+    "correct": "Assuming",
+    "wrong1": "Ignoring",
+    "wrong2": "Denying"
+  },
+  {
+    "sentence": "We should set expectations early regarding ___ delays.",
+    "correct": "possible",
+    "wrong1": "rare",
+    "wrong2": "impossible"
+  }
+]

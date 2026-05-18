@@ -120,6 +120,7 @@ async function run() {
     username,
     lessonName
   )
+  console.log("mp3s will be written to ", outputDir)
 
   for (const card of cards) {
 

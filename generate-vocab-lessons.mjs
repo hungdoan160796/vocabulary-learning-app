@@ -13,26 +13,26 @@ const client = new OpenAI({
 // CONFIG
 // =========================
 
-const INPUT_DIR =
-  "E:\\teaching-project-1\\data\\ctrang\\improved"
+const INPUT_DIR = path.join(process.cwd())
 
-const OUTPUT_CONTENT_DIR =
-  "E:\\vocabulary-learning-app\\content\\ctrang"
+const OUTPUT_CONTENT_DIR = path.join(process.cwd())
 
 // =========================
 // GET INPUT FILE
 // =========================
 
-const inputFile = process.argv[2]
 
-if (!inputFile) {
+const user = process.argv[2]
+const inputFile = process.argv[3]
+
+if (!inputFile || !user) {
   console.error(
-    "Usage: node generate-vocab.mjs lesson-1.md"
+    "Usage: node generate-vocab.mjs ahoai lesson-1.md"
   )
   process.exit(1)
 }
 
-const inputPath = path.join(INPUT_DIR, inputFile)
+const inputPath = path.join(INPUT_DIR, "lessons", user, inputFile)
 
 // =========================
 // HELPERS
@@ -78,7 +78,7 @@ Generate a JSON array of useful vocabulary words from the lesson.
 
 RULES:
 - Include only meaningful vocabulary
-- Pick about 10-20 words/phrases
+- Pick about 20-30 words/phrases
 - Prefer:
   nouns, verbs, adjectives, phrases
 - Avoid:
@@ -186,6 +186,7 @@ async function generateFlashcards(
 You are generating vocabulary revision flashcards.
 
 TASK:
+See each object as a sentence with a vocabulary.
 Convert each object into this format:
 
 {
@@ -199,6 +200,7 @@ RULES:
 - Replace ONLY the correct word with ___
 - wrong answers must not be synonyms of the correct word, or acceptably close in meaning
 - If original sentence is too long, simplify the sentence but keep the same meaning and the target word
+-  If the sentence does not have meaning of wrongly formatted, write a new sentence.
 - Output ONLY valid JSON array
 - No markdown
 
@@ -267,7 +269,7 @@ async function main() {
 
   // Optional debug output
   const vocabDebugPath = path.join(
-    OUTPUT_CONTENT_DIR,
+    OUTPUT_CONTENT_DIR, "content", user,
     `lesson${lessonNumber}-vocabularyList.json`
   )
 
@@ -288,7 +290,7 @@ async function main() {
 
   // Optional debug output
   const sentenceDebugPath = path.join(
-    OUTPUT_CONTENT_DIR,
+    OUTPUT_CONTENT_DIR, "content", user,
     `lesson${lessonNumber}-sentences.json`
   )
 
@@ -311,7 +313,7 @@ async function main() {
   // =========================
   
   const outputPath = path.join(
-    OUTPUT_CONTENT_DIR,
+    OUTPUT_CONTENT_DIR, "content", user,
     `lesson${lessonNumber}.json`
   )
 
