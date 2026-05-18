@@ -44,7 +44,7 @@ export default function LessonsPage() {
         <h1 className="lg:text-5xl text-3xl font-bold lg:p-4 p-12">Lessons</h1>
         </div>
       </div>
-      <div className="absolute w-full lg:top-[15vh] top-[10vh] lg:max-w-200 lg:max-h-screen h-screen ">
+      <div className="absolute pt-4 w-full lg:top-[15vh] top-[10vh] lg:max-w-200 lg:max-h-screen h-screen ">
         <LessonCarousel lessons={lessons} learnerId={learnerId}/>
       </div>
     </div>
