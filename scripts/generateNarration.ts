@@ -21,11 +21,12 @@ const VOICES = [
     text: string,
     outputPath: string
   ) {
+    console.log("API KEY:", process.env.ELEVENLABS_API_KEY)
       const response = await fetch(`https://api.elevenlabs.io/v1/text-to-speech/${voiceId}`,
       {
         method: "POST",
         headers: {
-          "xi-api-key": API_KEY,
+          "xi-api-key": String(API_KEY).trim(),
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
@@ -107,7 +108,6 @@ async function run() {
   const raw = fs.readFileSync(inputFile, "utf-8")
 
   const cards: Flashcard[] = JSON.parse(raw)
-
   // lesson1.json -> lesson-1
   const lessonName =
     path.basename(inputFile, ".json")

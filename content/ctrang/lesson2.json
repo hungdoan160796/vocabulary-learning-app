@@ -1,0 +1,128 @@
+[
+  {
+    "sentence": "Talking about ___ – cleaning, cooking, washing.",
+    "correct": "daily chores",
+    "wrong1": "vacation plans",
+    "wrong2": "holiday events"
+  },
+  {
+    "sentence": "Every day, I ___ the floor.",
+    "correct": "clean",
+    "wrong1": "paint",
+    "wrong2": "drive"
+  },
+  {
+    "sentence": "After dinner, I ___ the dishes.",
+    "correct": "wash",
+    "wrong1": "write",
+    "wrong2": "draw"
+  },
+  {
+    "sentence": "I usually ___ dinner for my family.",
+    "correct": "cook",
+    "wrong1": "repair",
+    "wrong2": "build"
+  },
+  {
+    "sentence": "Every morning, I ___ breakfast.",
+    "correct": "make",
+    "wrong1": "throw",
+    "wrong2": "break"
+  },
+  {
+    "sentence": "I always ___ the bed after waking up.",
+    "correct": "make",
+    "wrong1": "break",
+    "wrong2": "breakdown"
+  },
+  {
+    "sentence": "On weekends, I ___ the laundry.",
+    "correct": "do",
+    "wrong1": "buy",
+    "wrong2": "sell"
+  },
+  {
+    "sentence": "I ___ up clothes when they are dry.",
+    "correct": "hang",
+    "wrong1": "kick",
+    "wrong2": "throw"
+  },
+  {
+    "sentence": "After drying, I ___ clothes neatly.",
+    "correct": "fold",
+    "wrong1": "rip",
+    "wrong2": "tear"
+  },
+  {
+    "sentence": "I ___ clothes to remove wrinkles.",
+    "correct": "iron",
+    "wrong1": "cut",
+    "wrong2": "wash"
+  },
+  {
+    "sentence": "Every week, I ___ the bathroom.",
+    "correct": "clean",
+    "wrong1": "paint",
+    "wrong2": "build"
+  },
+  {
+    "sentence": "I ___ out the trash every evening.",
+    "correct": "take",
+    "wrong1": "buy",
+    "wrong2": "forget"
+  },
+  {
+    "sentence": "I ___ care of the baby during the day.",
+    "correct": "take",
+    "wrong1": "ignore",
+    "wrong2": "lose"
+  },
+  {
+    "sentence": "I ___ for groceries once a week.",
+    "correct": "shop",
+    "wrong1": "drive",
+    "wrong2": "cook"
+  },
+  {
+    "sentence": "I ___ the clothes after washing.",
+    "correct": "fold",
+    "wrong1": "burn",
+    "wrong2": "cut"
+  },
+  {
+    "sentence": "I ___ the clothes to make them smooth.",
+    "correct": "iron",
+    "wrong1": "tear",
+    "wrong2": "wash"
+  },
+  {
+    "sentence": "I do the ___ every weekend.",
+    "correct": "laundry",
+    "wrong1": "gardening",
+    "wrong2": "shopping"
+  },
+  {
+    "sentence": "I throw the ___ away every day.",
+    "correct": "trash",
+    "wrong1": "books",
+    "wrong2": "clothes"
+  },
+  {
+    "sentence": "I buy ___ at the supermarket.",
+    "correct": "groceries",
+    "wrong1": "furniture",
+    "wrong2": "clothes"
+  },
+  {
+    "sentence": "I am ___ for cleaning the kitchen.",
+    "correct": "responsible",
+    "wrong1": "absent",
+    "wrong2": "forgotten"
+  },
+  {
+    "sentence": "I'm too ___ to make lunch.",
+    "correct": "busy",
+    "wrong1": "lazy",
+    "wrong2": "tired"
+  }
+]
