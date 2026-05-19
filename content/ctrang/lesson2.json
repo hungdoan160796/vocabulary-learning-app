@@ -31,7 +31,7 @@
   },
   {
     "sentence": "I always ___ the bed after waking up.",
-    "correct": "make",
+    "correct": "-make",
     "wrong1": "break",
     "wrong2": "breakdown"
   },
@@ -61,7 +61,7 @@
   },
   {
     "sentence": "Every week, I ___ the bathroom.",
-    "correct": "clean",
+    "correct": "-clean",
     "wrong1": "paint",
     "wrong2": "build"
   },
@@ -73,7 +73,7 @@
   },
   {
     "sentence": "I ___ care of the baby during the day.",
-    "correct": "take",
+    "correct": "-take",
     "wrong1": "ignore",
     "wrong2": "lose"
   },
