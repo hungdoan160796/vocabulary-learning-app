@@ -26,10 +26,10 @@ export default function OptionButton({
     <button
       onClick={onClick}
       className={`
-        lg:w-[40vw]
-        w-60
-        lg:text-3xl
-        text-1xl 
+        lg:w-full
+        w-full
+        lg:text-2xl
+        text-xl 
         rounded-2xl
         border
         p-4

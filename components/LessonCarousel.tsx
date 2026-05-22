@@ -18,7 +18,7 @@ export default function LessonCarousel({ lessons, learnerId }: Props) {
           href={`/lessons/${lesson.id}?learnerId=${learnerId}`}
           className="break-inside-avoid border rounded-3xl shadow-lg flex flex-col justify-center items-center transition hover:shadow-xl lg:p-4 p-8 w-full"
         >
-          <h2 className="lg:text-3xl text-xl font-bold">
+          <h2 className="lg:text-2xl text-xl font-bold">
             {lesson.title}
           </h2>
 

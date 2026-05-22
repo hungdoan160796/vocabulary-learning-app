@@ -17,6 +17,7 @@ import { LessonCardData } from "../types/lesson"
 import { shuffle } from "../lib/shuffle"
 
 import OptionButton from "./OptionButton"
+import FlipCard from "./FlipCard"
 
 interface Props {
   card: LessonCardData
@@ -146,7 +147,7 @@ export default function LessonCard({
       card.wrong2,
     ])
   }, [card])
-
+  if (card.type == "chart")
   return (
     <div className="w-full lg:min-h-[60vh] min-h-[60vh] flex flex-col justify-start rounded-3xl lg:p-4 shadow-xl">
       {/* Replay audio */}
@@ -160,24 +161,38 @@ export default function LessonCard({
         }
         className="w-fit rounded-full transition gap-4 lg:p-4"
       >
-        <Volume2 className="lg:h-[40] lg:w-[40] h-4 w-4" />
+        <Volume2 className="lg:h-[2vw] lg:w-[2vw] h-4 w-4 lg:m-0 m-4" />
+      </button>
+
+      {/* Chart */}
+      <div className="w-full flex flex-col items-center justify-center lg:p-4 p-4 gap-4">
+        <FlipCard card={card} />
+      </div>
+    </div>
+  )
+  else return (
+    <div className="w-full lg:min-h-[60vh] min-h-[60vh] flex flex-col justify-start rounded-3xl lg:p-4 shadow-xl">
+      {/* Replay audio */}
+      <button
+        onClick={() =>
+          playAudio(
+            completed
+              ? getAudioPath(2)
+              : getAudioPath(1)
+          )
+        }
+        className="w-fit rounded-full transition gap-4 lg:p-4"
+      >
+        <Volume2 className="lg:h-[2vw] lg:w-[2vw] h-4 w-4 lg:m-0 m-4" />
       </button>
 
       {/* Sentence */}
       <div className="w-full flex flex-col items-center justify-center lg:p-4 p-4 gap-4">
-        <h2 className="text-center lg:text-4xl text-2xl font-bold leading-relaxed">
-          {card.sentence}
-        </h2>
-
-        {completed && card.translation ? (
-          <p className="text-center lg:text-xl text-base text-slate-600">
-            {card.translation}
-          </p>
-        ) : null}
+        <FlipCard card={card} />
       </div>
 
       {/* Options */}
-      <div className="w-full space-y-4 flex flex-col items-center lg:gap-4">
+      <div className="w-full space-y-4 flex flex-col items-center">
         {options.map((option) => {
           const state =
             selectedOption === option
@@ -189,9 +204,9 @@ export default function LessonCard({
           return (
             <div
               key={option}
-              className="flex flex-col items-center gap-2"
+              className="min-w-[50%] flex flex-col items-center"
             >
-              <div className="flex-1">
+              <div className="w-full flex-1">
                 <OptionButton
                   option={option}
                   onClick={() =>

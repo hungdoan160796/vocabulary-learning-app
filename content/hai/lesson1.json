@@ -1,0 +1,60 @@
+[
+  {
+    "type": "chart",
+    "sentence": "___! The sun is bright today!",
+    "correct": "Good morning",
+    "wrong1": "Good night",
+    "wrong2": "Goodbye",
+    "data": {
+        "type": "clustered-bar",
+        "labels": ["2000", "2005", "2010", "2015"],
+        "series": [
+        {
+            "name": "Japan",
+            "values": [20, 35, 28, 50]
+        },
+        {
+            "name": "Korea",
+            "values": [15, 25, 40, 60]
+        }
+        ]
+    }
+  },
+  {
+    "type": "chart",
+    "sentence": "New Hampshire ___ more than 1 million tourists from around the globe.",
+    "correct": "attracted",
+    "data": {
+        "type": "pie",
+        "title": "tourists in two countries",
+        "charts": [
+            {
+                "title": "Hampshire",
+                "segments": [
+                    {
+                    "label": "global",
+                    "value": 87
+                    },
+                    {
+                    "label": "neighborhood",
+                    "value": 23
+                    }
+                ]
+            },
+            {
+                "title": "New York",
+                "segments": [
+                    {
+                    "label": "global",
+                    "value": 45
+                    },
+                    {
+                    "label": "neighborhood",
+                    "value": 55
+                    }
+                ]
+            }
+        ]
+    }
+  }
+]
