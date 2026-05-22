@@ -77,13 +77,11 @@ TASK:
 Generate a JSON array of useful vocabulary words from the lesson.
 
 RULES:
-- Include only meaningful vocabulary
-- Pick about 20-30 words/phrases
+- Include only meaningful vocabulary that helps understand the lesson content
 - Prefer:
   nouns, verbs, adjectives, phrases
 - Avoid:
   function words, grammar words, filler words, names of people/places/brands
-- Prioritize words that are important for understanding the lesson content
 - The array must not contain duplicates
 - Output ONLY valid JSON array
 - No markdown
@@ -190,14 +188,14 @@ See each object as a sentence with a vocabulary.
 Convert each object into this format:
 
 {
-  "sentence": "First, I ___ my emails.",
+  "sentence": "to see if something is right or wrong",
   "correct": "check",
   "wrong1": "attend",
   "wrong2": "finalize"
 }
 
 RULES:
-- Replace ONLY the correct word with ___
+- The sentence is written using simple language, as short as possible, and clearly shows the meaning of the correct word without using the correct word itself
 - wrong answers must not be synonyms of the correct word, or acceptably close in meaning
 - If original sentence is too long, simplify the sentence but keep the same meaning and the target word
 -  If the sentence does not have meaning of wrongly formatted, write a new sentence.

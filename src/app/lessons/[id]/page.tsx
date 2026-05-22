@@ -7,6 +7,7 @@ import LessonCard from "../../../../components/LessonCards"
 import SwipeContainer from "../../../../components/SwipeContainer"
 import { Lesson } from "../../../../types/lesson"
 import { ThemeToggle } from "../../../../components/ThemeToggle"
+import { shuffle } from "../../../../lib/shuffle"
 
 export default function LessonPage() {
   const params = useParams()
@@ -40,7 +41,7 @@ export default function LessonPage() {
         if (!res.ok) {
           throw new Error("Failed")
         }
-        setLesson(data)
+        setLesson({ ...data, cards: shuffle(data.cards) })
       } catch (err) {
         console.error("Failed to load lesson", err)
       }

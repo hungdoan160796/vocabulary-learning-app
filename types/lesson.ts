@@ -3,6 +3,7 @@ export interface LessonCardData {
   correct: string
   wrong1: string
   wrong2: string
+  translation?: string
 }
 
 export interface Lesson {

@@ -9,9 +9,7 @@ dotenv.config()
 const API_KEY = process.env.ELEVENLABS_API_KEY!
     
 const VOICES = [
-  process.env.VOICE_ID_ALICE!,
   process.env.VOICE_ID_BELLE!,
-  process.env.VOICE_ID_JACK!,
   process.env.VOICE_ID_ROGER!,
   process.env.VOICE_ID_LIAM!,
 ]

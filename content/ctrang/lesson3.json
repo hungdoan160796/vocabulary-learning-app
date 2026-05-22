@@ -1,0 +1,135 @@
+[
+  {
+    "sentence": "Where are you from? What is your ___?",
+    "translation": "Bạn đến từ đâu? Quê quán của bạn là gì?",
+    "correct": "hometown",
+    "wrong1": "city",
+    "wrong2": "country"
+  },
+  {
+    "sentence": "Where do you live? I live in Ho Chi Minh city, ___ 8.",
+    "translation": "Bạn sống ở đâu? Tôi sống ở TP. Hồ Chí Minh, quận 8.",
+    "correct": "district",
+    "wrong1": "mountain",
+    "wrong2": "ocean"
+  },
+  {
+    "sentence": "What is your ___? I am a student.",
+    "translation": "Nghề nghiệp của bạn là gì? Tôi là một học sinh.",
+    "correct": "job",
+    "wrong1": "hobby",
+    "wrong2": "vacation"
+  },
+  {
+    "sentence": "What is your profession? I ___ as a teacher.",
+    "translation": "Nghề nghiệp của bạn là gì? Tôi làm giáo viên.",
+    "correct": "work",
+    "wrong1": "rest",
+    "wrong2": "play"
+  },
+  {
+    "sentence": "a ___ helps sick people.",
+    "translation": "Bác sĩ giúp đỡ những người bệnh.",
+    "correct": "doctor",
+    "wrong1": "teacher",
+    "wrong2": "driver"
+  },
+  {
+    "sentence": "a ___ takes care of sick people.",
+    "translation": "Y tá chăm sóc những người bệnh.",
+    "correct": "nurse",
+    "wrong1": "chef",
+    "wrong2": "musician"
+  },
+  {
+    "sentence": "an ___ works with money and payments.",
+    "translation": "Kế toán làm việc với tiền bạc và thanh toán.",
+    "correct": "accountant",
+    "wrong1": "waiter",
+    "wrong2": "driver"
+  },
+  {
+    "sentence": "a ___ fixes pipes in a house.",
+    "translation": "Thợ ống nước sửa chữa đường ống trong nhà.",
+    "correct": "plumber",
+    "wrong1": "barista",
+    "wrong2": "musician"
+  },
+  {
+    "sentence": "a ___ fixes cars and machines.",
+    "translation": "Thợ máy sửa chữa xe cộ và máy móc.",
+    "correct": "mechanic",
+    "wrong1": "firefighter",
+    "wrong2": "chef"
+  },
+  {
+    "sentence": "a ___ enforces the law.",
+    "translation": "Cảnh sát thực thi pháp luật.",
+    "correct": "police officer",
+    "wrong1": "driver",
+    "wrong2": "teacher"
+  },
+  {
+    "sentence": "a ___ saves people from fires.",
+    "translation": "Lính cứu hỏa cứu người khỏi đám cháy.",
+    "correct": "firefighter",
+    "wrong1": "plumber",
+    "wrong2": "accountant"
+  },
+  {
+    "sentence": "a ___ takes beautiful pictures.",
+    "translation": "Nhiếp ảnh gia chụp những bức ảnh đẹp.",
+    "correct": "photographer",
+    "wrong1": "musician",
+    "wrong2": "driver"
+  },
+  {
+    "sentence": "a ___ writes and plays music.",
+    "translation": "Nhạc sĩ viết và chơi nhạc.",
+    "correct": "musician",
+    "wrong1": "chef",
+    "wrong2": "nurse"
+  },
+  {
+    "sentence": "a ___ cooks food in a restaurant.",
+    "translation": "Đầu bếp nấu ăn trong nhà hàng.",
+    "correct": "chef",
+    "wrong1": "teacher",
+    "wrong2": "accountant"
+  },
+  {
+    "sentence": "a ___ works in restaurants and serves food and drinks.",
+    "translation": "Phục vụ làm việc trong nhà hàng và phục vụ đồ ăn và thức uống.",
+    "correct": "waiter/waitress",
+    "wrong1": "driver",
+    "wrong2": "musician"
+  },
+  {
+    "sentence": "a ___ makes drinks like cocktails.",
+    "translation": "Pha chế làm đồ uống như cocktail.",
+    "correct": "barista",
+    "wrong1": "plumber",
+    "wrong2": "driver"
+  },
+  {
+    "sentence": "a ___ drives people to places.",
+    "translation": "Tài xế lái xe đưa mọi người đến những nơi.",
+    "correct": "driver",
+    "wrong1": "photographer",
+    "wrong2": "chef"
+  },
+  {
+    "sentence": "an ___ designs buildings.",
+    "translation": "Kiến trúc sư thiết kế các tòa nhà.",
+    "correct": "architect",
+    "wrong1": "mechanic",
+    "wrong2": "musician"
+  },
+  {
+    "sentence": "a ___ create designs by request.",
+    "translation": "Nhà thiết kế tạo ra các thiết kế theo yêu cầu.",
+    "correct": "designer",
+    "wrong1": "driver",
+    "wrong2": "waiter"
+  }
+]

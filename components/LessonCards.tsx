@@ -160,14 +160,20 @@ export default function LessonCard({
         }
         className="w-fit rounded-full transition gap-4 lg:p-4"
       >
-        <Volume2 className="lg:h-[40] lg:w-[40] h-4 w-4 m-4" />
+        <Volume2 className="lg:h-[40] lg:w-[40] h-4 w-4" />
       </button>
 
       {/* Sentence */}
-      <div className="w-full flex items-center justify-center lg:p-4 p-4">
+      <div className="w-full flex flex-col items-center justify-center lg:p-4 p-4 gap-4">
         <h2 className="text-center lg:text-4xl text-2xl font-bold leading-relaxed">
           {card.sentence}
         </h2>
+
+        {completed && card.translation ? (
+          <p className="text-center lg:text-xl text-base text-slate-600">
+            {card.translation}
+          </p>
+        ) : null}
       </div>
 
       {/* Options */}
