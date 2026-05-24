@@ -21,3 +21,10 @@ export interface Lesson {
   title: string
   cards: LessonCardData[]
 }
+
+
+export interface Homeworks {
+  id: string,
+  title: string,
+  homework?: string
+}

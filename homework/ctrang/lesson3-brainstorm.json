@@ -1,0 +1,45 @@
+[
+  {
+    "words": [
+      "doctor",
+      "nurse",
+      "plumber",
+      "mechanic",
+      "police officer",
+      "firefighter",
+      "chef",
+      "designer"
+    ],
+    "homeworkType": "hw-type-6",
+    "homeworkTypeDescription": "Read and identify vocabulary from context",
+    "reason": "These words represent common professions that learners often confuse due to their specific roles and contexts; identifying them from context helps solidify understanding of job-related vocabulary.",
+    "homeworkSummary": "Learners read a passage describing various professionals at work and identify the correct job titles based on contextual clues."
+  },
+  {
+    "words": [
+      "accountant",
+      "photographer",
+      "musician",
+      "waiter/waitress",
+      "barista",
+      "driver",
+      "architect"
+    ],
+    "homeworkType": "hw-type-15",
+    "homeworkTypeDescription": "Complete dialogues with missing lines",
+    "reason": "These professions are often discussed in conversational contexts; completing dialogues helps learners practice real-life communication about jobs and services.",
+    "homeworkSummary": "Learners complete dialogues between people discussing their jobs or services, filling in missing lines using the target vocabulary."
+  },
+  {
+    "words": [
+      "hometown",
+      "district",
+      "job",
+      "work"
+    ],
+    "homeworkType": "hw-type-24",
+    "homeworkTypeDescription": "Write a short paragraph on a topic",
+    "reason": "These words relate to personal background and work; writing a paragraph encourages learners to use the vocabulary in a meaningful, connected way.",
+    "homeworkSummary": "Learners write a short paragraph describing their hometown, district, and their job or work, incorporating the target vocabulary."
+  }
+]

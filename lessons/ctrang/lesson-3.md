@@ -227,3 +227,169 @@ Match introductions to pictures
 4. What does Minh like to do?
 5. Where does Tom live now?
 6. Why does Mia want to visit Da Nang?
+
+---
+
+# Homework
+
+---
+
+## Who Does What? - Job Titles Practice
+
+### Homework Type
+hw-type-6
+
+### Vocabulary
+doctor, nurse, plumber, mechanic, police officer, firefighter, chef, designer
+
+### Instructions
+Read the passage below about different people at work. Then, answer the questions by choosing the correct job title from the list.
+
+### Activities
+
+#### reading and matching
+
+### Reading Passage
+
+1. Maria helps sick people by giving them medicine and checking their health. She works in a hospital.
+
+2. Tom fixes cars. When a car doesn't start, he knows how to make it work again.
+
+3. Lisa designs clothes. She draws new fashion ideas and picks colors and fabrics.
+
+4. John wears a uniform and helps keep the city safe. He catches bad guys and helps people in trouble.
+
+5. Anna cooks delicious meals in a restaurant. She wears a big white hat.
+
+6. Mike fixes broken water pipes in houses. When the sink leaks, he comes to repair it.
+
+7. Sarah takes care of patients in the hospital. She helps the doctor and comforts people.
+
+8. Dave drives a big truck to put out fires. He is very brave and helps save people.
+
+---
+
+### Questions
+
+Choose the correct job title for each person from this list:
+
+`doctor`, `nurse`, `plumber`, `mechanic`, `police officer`, `firefighter`, `chef`, `designer`
+
+| Person | Job Title |
+|--------|-----------|
+| 1. Maria | ________ |
+| 2. Tom | ________ |
+| 3. Lisa | ________ |
+| 4. John | ________ |
+| 5. Anna | ________ |
+| 6. Mike | ________ |
+| 7. Sarah | ________ |
+| 8. Dave | ________ |
+
+---
+
+## Jobs and Services: Complete the Dialogues
+
+### Homework Type
+hw-type-15
+
+### Vocabulary
+accountant, photographer, musician, waiter/waitress, barista, driver, architect
+
+### Instructions
+Read the dialogues below. Fill in the missing lines using the vocabulary words: accountant, photographer, musician, waiter/waitress, barista, driver, architect. Write the correct job title in the blanks.
+
+### Activities
+
+#### fill-in-the-blank
+
+### Dialogue 1
+
+A: What do you do for work?
+
+B: I am an _______________. I help people with their taxes and money.
+
+---
+
+### Dialogue 2
+
+A: Who takes the pictures at your wedding?
+
+B: Our _______________ was very professional and friendly.
+
+---
+
+### Dialogue 3
+
+A: I heard you play the guitar.
+
+B: Yes! I am a _______________. I play music in a band.
+
+---
+
+### Dialogue 4
+
+A: Can you bring us some menus, please?
+
+B: Of course! I’m the _______________ here.
+
+---
+
+### Dialogue 5
+
+A: I love your coffee! Who makes it?
+
+B: That’s our _______________. She makes the best lattes.
+
+---
+
+### Dialogue 6
+
+A: How do you get to work every day?
+
+B: I’m a _______________. I drive a bus all day.
+
+---
+
+### Dialogue 7
+
+A: Who designed this beautiful building?
+
+B: The _______________ is very talented and creative.
+
+---
+
+## Describe Your Hometown, District, and Job
+
+### Homework Type
+hw-type-24
+
+### Vocabulary
+hometown, district, job, work
+
+### Instructions
+Write a short paragraph about your hometown, the district where you live, and your job or work. Use the words: hometown, district, job, and work. Answer the questions to help you write.
+
+### Activities
+
+#### writing
+
+### Questions to help you write your paragraph:
+
+1. What is the name of your hometown?
+2. Can you describe your district? (Is it big or small? What is it like?)
+3. What is your job or work?
+4. What do you like about your job or work?
+
+---
+
+### Now, write a short paragraph (5-7 sentences) using the vocabulary words:
+- hometown
+- district
+- job
+- work
+
+Example:
+
+My hometown is a small city near the mountains. I live in a quiet district with many parks. My job is a teacher. I like my work because I help children learn new things.
+

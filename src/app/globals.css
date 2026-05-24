@@ -20,22 +20,45 @@
 }
 
 .dark {
-  /* Dark theme */
-  --background: #0a0a0a;
-  --foreground: #ededed;
+  /* Dark theme — tuned for better contrast and softer accents */
+  --background: #070a0f;
+  --foreground: #e6eef8;
 
-  --card: #111827;
-  --card-foreground: #f9fafb;
+  --card: #0f1724;
+  --card-foreground: #e6eef8;
 
-  --primary: #f9fafb;
-  --primary-foreground: #111827;
+  --primary: #e6eef8;
+  --primary-foreground: #071126;
 
-  --secondary: #1f2937;
-  --secondary-foreground: #f9fafb;
+  --secondary: #0b1220;
+  --secondary-foreground: #e6eef8;
 
-  --border: #374151;
-  --muted: #1f2937;
-  --muted-foreground: #9ca3af;
+  --border: rgba(255,255,255,0.06);
+  --muted: #0b1220;
+  --muted-foreground: #9aa6b2;
+}
+
+/* Dark-mode overrides for lesson-markdown to improve table and text contrast */
+.dark .lesson-markdown {
+  --md-text: var(--foreground);
+  --md-muted: rgba(230,238,248,0.75);
+  --md-border: rgba(230,238,248,0.06);
+  --md-soft: rgba(230,238,248,0.03);
+  --md-accent: #60a5fa;
+}
+
+.dark .lesson-markdown th {
+  background: rgba(230,238,248,0.03);
+  color: var(--card-foreground);
+}
+
+.dark .lesson-markdown tr:nth-child(even) td {
+  background: rgba(230,238,248,0.02);
+}
+
+.dark .lesson-markdown code {
+  background: rgba(230,238,248,0.04);
+  color: #dbeafe;
 }
 
 @theme inline {
@@ -77,4 +100,297 @@ body {
     background-color 0.2s ease,
     color 0.2s ease,
     border-color 0.2s ease;
+}
+
+.lesson-markdown {
+  --md-text: var(--foreground);
+  --md-muted: rgba(100, 116, 139, 0.9);
+  --md-border: rgba(148, 163, 184, 0.25);
+  --md-soft: rgba(148, 163, 184, 0.08);
+  --md-accent: #2563eb;
+
+  margin-top: 20px;
+  color: var(--md-text);
+
+  /* better reading */
+  line-height: 1.8;
+  font-size: 1rem;
+  word-break: break-word;
+}
+
+/* =========================
+   Headings
+========================= */
+
+.lesson-markdown h1,
+.lesson-markdown h2,
+.lesson-markdown h3,
+.lesson-markdown h4,
+.lesson-markdown h5,
+.lesson-markdown h6 {
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+
+  /* auto spacing between sections */
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+
+  scroll-margin-top: 120px;
+}
+
+/* visual hierarchy */
+.lesson-markdown h1 {
+  font-size: clamp(2.4rem, 5vw, 3.2rem);
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid var(--md-border);
+}
+
+.lesson-markdown h2 {
+  font-size: clamp(1.9rem, 4vw, 2.4rem);
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--md-border);
+}
+
+.lesson-markdown h3 {
+  font-size: 1.5rem;
+  color: var(--md-accent);
+}
+
+.lesson-markdown h4 {
+  font-size: 1.2rem;
+}
+
+.lesson-markdown h5 {
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--md-muted);
+}
+
+.lesson-markdown h6 {
+  font-size: 0.95rem;
+  color: var(--md-muted);
+}
+
+/* first heading shouldn't have giant top gap */
+.lesson-markdown > :first-child {
+  margin-top: 0 !important;
+}
+
+/* =========================
+   Paragraphs
+========================= */
+
+.lesson-markdown p {
+  margin: 1rem 0;
+  line-height: 1.9;
+  font-size: 1rem;
+}
+
+/* auto spacing between blocks */
+.lesson-markdown > * + * {
+  margin-top: 1rem;
+}
+
+/* =========================
+   Lists
+========================= */
+
+.lesson-markdown ul,
+.lesson-markdown ol {
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+
+  /* cleaner indentation */
+  line-height: 1.9;
+}
+
+ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+/* =========================
+   Quotes
+========================= */
+
+.lesson-markdown blockquote {
+  margin: 1.75rem 0;
+  padding: 1rem 1.25rem;
+
+  border-left: 4px solid var(--md-accent);
+  background: rgba(59, 130, 246, 0.08);
+
+  border-radius: 0.75rem;
+
+  color: inherit;
+}
+
+.lesson-markdown blockquote p {
+  margin: 0.5rem 0;
+}
+
+/* =========================
+   Inline code
+========================= */
+
+.lesson-markdown code {
+  background: rgba(15, 23, 42, 0.08);
+  color: #0f172a;
+
+  padding: 0.18rem 0.4rem;
+  border-radius: 0.4rem;
+
+  font-family:
+    ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    Monaco,
+    Consolas,
+    "Liberation Mono",
+    "Courier New",
+    monospace;
+
+  font-size: 0.92rem;
+}
+
+/* =========================
+   Code blocks
+========================= */
+
+.lesson-markdown pre {
+  margin: 1.75rem 0;
+  padding: 1.1rem 1.25rem;
+
+  overflow-x: auto;
+
+  border-radius: 1rem;
+
+  background: #0f172a;
+  color: #f8fafc;
+
+  border: 1px solid rgba(255, 255, 255, 0.06);
+
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.lesson-markdown pre code {
+  background: transparent;
+  color: inherit;
+  padding: 0;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+/* =========================
+   Tables
+========================= */
+
+.lesson-markdown table {
+  width: 100%;
+  border-collapse: collapse;
+
+  margin: 2rem 0;
+
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+
+.lesson-markdown th,
+.lesson-markdown td {
+  border: 1px solid var(--md-border);
+  padding: 0.85rem 1rem;
+  text-align: left;
+}
+
+.lesson-markdown th {
+  background: rgba(226, 232, 240, 0.8);
+  font-weight: 700;
+}
+
+.lesson-markdown tr:nth-child(even) td {
+  background: rgba(148, 163, 184, 0.05);
+}
+
+/* =========================
+   Links
+========================= */
+
+.lesson-markdown a {
+  color: var(--md-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.lesson-markdown a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   Images
+========================= */
+
+.lesson-markdown img {
+  max-width: 100%;
+
+  border-radius: 0.75rem;
+
+  margin: 1.5rem 0;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   Horizontal line
+========================= */
+
+.lesson-markdown hr {
+  margin: 3rem 0;
+  border: none;
+  border-top: 1px solid var(--md-border);
+}
+
+/* =========================
+   Better spacing after headings
+========================= */
+
+.lesson-markdown h1 + *,
+.lesson-markdown h2 + *,
+.lesson-markdown h3 + *,
+.lesson-markdown h4 + * {
+  margin-top: 0.75rem !important;
+}
+
+/* =========================
+   Mobile tuning
+========================= */
+
+@media (max-width: 768px) {
+  .lesson-markdown {
+    font-size: 0.97rem;
+  }
+
+  .lesson-markdown h1 {
+    font-size: 2rem;
+  }
+
+  .lesson-markdown h2 {
+    font-size: 1.6rem;
+  }
+
+  .lesson-markdown h3 {
+    font-size: 1.3rem;
+  }
+
+  .lesson-markdown pre {
+    padding: 1rem;
+  }
 }

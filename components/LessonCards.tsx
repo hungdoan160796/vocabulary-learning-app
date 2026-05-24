@@ -187,8 +187,17 @@ export default function LessonCard({
       </button>
 
       {/* Sentence */}
+      
       <div className="w-full flex flex-col items-center justify-center lg:p-4 p-4 gap-4">
-        <FlipCard card={card} />
+        <h2 className="text-center lg:text-4xl text-2xl font-bold leading-relaxed">
+          {card.sentence}
+        </h2>
+
+        {completed && card.translation ? (
+          <p className="text-center lg:text-xl text-base text-slate-600">
+            {card.translation}
+          </p>
+        ) : null}
       </div>
 
       {/* Options */}
