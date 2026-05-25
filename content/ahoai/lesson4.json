@@ -18,8 +18,8 @@
     "wrong2": "cancel"
   },
   {
-    "sentence": "Please ___ sales on timeline changes.",
-    "correct": "keep someone in the loop",
+    "sentence": "Please ___ sales in the loop on timeline changes.",
+    "correct": "keep",
     "wrong1": "exclude",
     "wrong2": "mislead"
   },

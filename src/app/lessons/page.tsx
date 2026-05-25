@@ -43,6 +43,12 @@ export default function LessonsPage() {
       <div className="w-full absolute top-0 left-0 flex items-center justify-center">
         <div className="lg:max-w-200 w-full lg:h-[15vh] h-[10vh] mb-4 p-4 rounded-xl shadow-lg border flex flex-col items-center justify-center gap-3">
           <h1 className="lg:text-5xl text-3xl font-bold lg:p-4 p-12">Lessons</h1>
+        </div>
+      </div>
+      <div className="absolute pt-4 w-full lg:top-[15vh] top-[10vh] lg:max-w-200 lg:max-h-screen h-screen ">
+        <LessonCarousel lessons={lessons} learnerId={learnerId}/>
+      </div>
+      <div className="fixed bottom-4 right-4 z-50 w-fit">
           <button
             type="button"
             onClick={() => router.push("/homeworks")}
@@ -50,10 +56,6 @@ export default function LessonsPage() {
           >
             Go to Homework
           </button>
-        </div>
-      </div>
-      <div className="absolute pt-4 w-full lg:top-[15vh] top-[10vh] lg:max-w-200 lg:max-h-screen h-screen ">
-        <LessonCarousel lessons={lessons} learnerId={learnerId}/>
       </div>
     </div>
   )

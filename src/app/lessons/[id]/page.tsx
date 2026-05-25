@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useMemo, useState } from "react"
-import { useParams, useSearchParams } from "next/navigation"
+import { useRouter, useParams, useSearchParams } from "next/navigation"
 import { Volume2, VolumeX } from "lucide-react"
 import LessonCard from "../../../../components/LessonCards"
 import SwipeContainer from "../../../../components/SwipeContainer"
@@ -11,6 +11,7 @@ import { shuffle } from "../../../../lib/shuffle"
 
 export default function LessonPage() {
   const params = useParams()
+  const router = useRouter()
   const searchParams = useSearchParams()
   const learnerId = searchParams.get("learnerId")
   const [soundEnabled, setSoundEnabled] = useState(true)
@@ -101,7 +102,7 @@ export default function LessonPage() {
           <button onClick={prev} className="lg:text-2xl rounded-xl lg:p-4 shadow-xl">
             Previous
           </button>
-          <button onClick={() => window.history.back()} className="lg:text-2xl rounded-xl lg:p-4 shadow-xl">
+          <button onClick={() => router.push("/")} className="lg:text-2xl rounded-xl lg:p-4 shadow-xl">
               Back to lessons
           </button>
           <button onClick={next} className="lg:text-2xl rounded-xl lg:p-4 shadow-xl">

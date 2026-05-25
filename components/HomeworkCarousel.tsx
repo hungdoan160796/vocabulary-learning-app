@@ -8,7 +8,7 @@ interface Props {
   homeworks: Homeworks[]
 }
 
-export default function LessonCarousel({ homeworks, learnerId }: Props) {
+export default function HomeworkCarousel({ homeworks, learnerId }: Props) {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
       {homeworks.map((hw) => (

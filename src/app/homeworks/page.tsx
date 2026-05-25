@@ -51,7 +51,7 @@ export default function homeworkPage() {
         <HomeworkCarousel homeworks={homeworks} learnerId={learnerId}/>
       </div>
         
-      <div className="sticky bottom-2 right-2 w-fit">
+      <div className="fixed bottom-4 right-4 z-50 w-fit">
       <button
         type="button"
         onClick={() => router.push("/")}

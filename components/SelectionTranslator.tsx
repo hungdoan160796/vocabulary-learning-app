@@ -87,7 +87,7 @@ export default function SelectionTranslator() {
             onClick={translate}
             className="rounded-full bg-blue-500 px-3 py-1 text-sm text-white shadow-lg"
           >
-            Translate
+            Dịch tiếng Việt
           </button>
         ) : (
           <div className="max-w-sm rounded-xl bg-black p-3 text-sm text-white shadow-2xl">
