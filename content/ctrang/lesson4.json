@@ -1,0 +1,104 @@
+[
+  {
+    "sentence": "when it's 5:30 we say five thirty or ___ five",
+    "correct": "half past",
+    "wrong1": "quarter past",
+    "wrong2": "ten past"
+  },
+  {
+    "sentence": "when it's 7:15 we say seven fifteen or ___ seven",
+    "correct": "quarter past",
+    "wrong1": "five to",
+    "wrong2": "o’clock"
+  },
+  {
+    "sentence": "when it's 5:45 we say five forty five or ___ six",
+    "correct": "quarter to",
+    "wrong1": "half past",
+    "wrong2": "quarter past"
+  },
+  {
+    "sentence": "this library gets ___ around this hour",
+    "correct": "quiet",
+    "wrong1": "loud",
+    "wrong2": "busy"
+  },
+  {
+    "sentence": "you wait for the bus at a ___",
+    "correct": "bus stop",
+    "wrong1": "restaurant",
+    "wrong2": "mall"
+  },
+  {
+    "sentence": "you buy and eat food at a ___",
+    "correct": "restaurant",
+    "wrong1": "library",
+    "wrong2": "bus stop"
+  },
+  {
+    "sentence": "you call a restaurant to make a ___",
+    "correct": "reservation",
+    "wrong1": "phone number",
+    "wrong2": "appointment"
+  },
+  {
+    "sentence": "if you ask your friend to go out, you have an ___",
+    "correct": "appointment",
+    "wrong1": "meeting",
+    "wrong2": "reservation"
+  },
+  {
+    "sentence": "I'm sorry could you ___ that? I couldn't hear you.",
+    "correct": "repeat",
+    "wrong1": "explain",
+    "wrong2": "cancel"
+  },
+  {
+    "sentence": "I'm calling to ___ the booking details.",
+    "correct": "confirm",
+    "wrong1": "deny",
+    "wrong2": "ignore"
+  },
+  {
+    "sentence": "Hello I want to ___ a table for 3 at 7:30 PM tomorrow evening.",
+    "correct": "book",
+    "wrong1": "cancel",
+    "wrong2": "visit"
+  },
+  {
+    "sentence": "hey what is our ___ for tomorrow?",
+    "correct": "schedule",
+    "wrong1": "menu",
+    "wrong2": "bill"
+  },
+  {
+    "sentence": "I didn't ___ that it was this late.",
+    "correct": "realize",
+    "wrong1": "forget",
+    "wrong2": "ignore"
+  },
+  {
+    "sentence": "Yesterday I ___ my mother I would go out today.",
+    "correct": "tell",
+    "wrong1": "listen",
+    "wrong2": "wait"
+  },
+  {
+    "sentence": "Thank you for making a reservation. Your table is now ___",
+    "correct": "booked",
+    "wrong1": "forgot",
+    "wrong2": "missed"
+  },
+  {
+    "sentence": "You call a restaurant to ___ a table.",
+    "correct": "reserve",
+    "wrong1": "cancel",
+    "wrong2": "forget"
+  },
+  {
+    "sentence": "I'm calling to confirm the appointment ___",
+    "correct": "details",
+    "wrong1": "guesses",
+    "wrong2": "lies"
+  }
+]

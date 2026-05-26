@@ -71,16 +71,6 @@ export default function HomeworkCard({
 
   return (
     <div className="lesson-markdown space-y-6">
-      <div className="flex items-center gap-2">
-        <button
-          onClick={() => playAudio(getAudioPath)}
-          className="flex items-center gap-2 px-4 py-2 rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition disabled:opacity-50"
-          disabled={!soundEnabled}
-        >
-          <Volume2 size={20} />
-          Play Audio
-        </button>
-      </div>
       <div className="prose dark:prose-invert max-w-none">
         <SelectionTranslator />
         <ReactMarkdown

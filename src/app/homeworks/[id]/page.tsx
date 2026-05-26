@@ -52,21 +52,6 @@ export default function HomeworkPage() {
 
   return (
     <div className="w-full lg:min-w-100 flex flex-col justify-center items-center">
-      <div className="w-full absolute top-0 left-0  flex items-center justify-center">
-        <div className="lg:max-w-200 w-full h-[10vh] mb-4 p-4 rounded-xl shadow-lg border flex items-center justify-between">
-          <button
-            onClick={toggleSound}
-            className="flex flex-row justify-center items-center rounded-xl gap-4"
-          >
-            Mute?
-            {soundEnabled ? (
-              <Volume2 className="lg:h-[2vw] lg:w-[2vw] h-4 w-4" />
-            ) : (
-              <VolumeX className="lg:h-[2vw] lg:w-[2vw] h-4 w-4" />
-            )}
-          </button>
-        </div>
-      </div>
       <div className="absolute top-[10vh] h-[76vh] w-full lg:max-w-200 flex flex-col justify-start scroll-auto">
         <HomeworkCard homework={homework} soundEnabled={soundEnabled}/>
       </div>
