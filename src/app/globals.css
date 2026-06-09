@@ -21,16 +21,16 @@
 
 .dark {
   /* Dark theme — tuned for better contrast and softer accents */
-  --background: #070a0f;
+  --background: #1d335a;
   --foreground: #e6eef8;
 
-  --card: #0f1724;
+  --card: #042253;
   --card-foreground: #e6eef8;
 
   --primary: #e6eef8;
-  --primary-foreground: #071126;
+  --primary-foreground: #0f2d6f;
 
-  --secondary: #0b1220;
+  --secondary: #061c49;
   --secondary-foreground: #e6eef8;
 
   --border: rgba(255,255,255,0.06);
