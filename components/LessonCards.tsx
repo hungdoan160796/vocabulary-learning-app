@@ -193,7 +193,7 @@ export default function LessonCard({
           {card.sentence}
         </h2>
 
-        {completed && card.translation ? (
+        {card.translation ? (
           <p className="text-center lg:text-xl text-base text-slate-600">
             {card.translation}
           </p>

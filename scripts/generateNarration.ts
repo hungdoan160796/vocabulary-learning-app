@@ -33,6 +33,7 @@ const VOICES = [
 
           // pause optimization
           voice_settings: {
+            speed: 0.8,
             stability: 0.4,
             similarity_boost: 0.8,
           }
@@ -98,7 +99,7 @@ async function run() {
 
   if (!inputFile || !username) {
     console.error(
-      "Usage: npx tsx scripts/generateNarrations.ts ahoai lesson1.json"
+      "Usage: npx tsx scripts/generateNarration.ts ahoai lesson1.json"
     )
     process.exit(1)
   }

@@ -27,7 +27,7 @@ const inputFile = process.argv[3]
 
 if (!inputFile || !user) {
   console.error(
-    "Usage: node generate-vocab.mjs ahoai lesson-1.md"
+    "Usage: node generate-vocab-lessons.mjs ahoai lesson-1.md"
   )
   process.exit(1)
 }
@@ -80,6 +80,7 @@ RULES:
 - Include only meaningful vocabulary that helps understand the lesson content
 - Prefer:
   nouns, verbs, adjectives, phrases
+- Number of vocabulary is around 20-30.  
 - Avoid:
   function words, grammar words, filler words, names of people/places/brands
 - The array must not contain duplicates
@@ -188,17 +189,19 @@ See each object as a sentence with a vocabulary.
 Convert each object into this format:
 
 {
-  "sentence": "to see if something is right or wrong",
-  "correct": "check",
-  "wrong1": "attend",
-  "wrong2": "finalize"
+  "sentence": "A basic ___ has a subject and verb."
+  "translation": "Một câu căn bản có chủ ngữ và động từ."
+  "correct": "sentence",
+  "wrong1": "comma",
+  "wrong2": "question"
 }
 
 RULES:
-- The sentence is written using simple language, as short as possible, and clearly shows the meaning of the correct word without using the correct word itself
+- The sentence is written using simple language, as short as possible, and clearly signals the correct word to be filled in ___
+- There must be ___ in the sentence, where the correct word should've been
+- translation is the meaning of the completed sentence in vietnamese
 - wrong answers must not be synonyms of the correct word, or acceptably close in meaning
-- If original sentence is too long, simplify the sentence but keep the same meaning and the target word
--  If the sentence does not have meaning of wrongly formatted, write a new sentence.
+- If the sentence does not have meaning of wrongly formatted, write a new sentence.
 - Output ONLY valid JSON array
 - No markdown
 

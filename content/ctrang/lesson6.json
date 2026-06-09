@@ -1,0 +1,142 @@
+[
+  {
+    "sentence": "A ___ person is nice and friendly.",
+    "translation": "thân thiện",
+    "correct": "friendly",
+    "wrong1": "tall",
+    "wrong2": "short"
+  },
+  {
+    "sentence": "A ___ person is higher than others.",
+    "translation": "cao",
+    "correct": "tall",
+    "wrong1": "kind",
+    "wrong2": "strong"
+  },
+  {
+    "sentence": "A ___ person is not tall.",
+    "translation": "thấp, lùn",
+    "correct": "short",
+    "wrong1": "easygoing",
+    "wrong2": "happy"
+  },
+  {
+    "sentence": "A ___ person is nice and helps others.",
+    "translation": "tốt bụng",
+    "correct": "kind",
+    "wrong1": "neighbor",
+    "wrong2": "cousin"
+  },
+  {
+    "sentence": "A ___ lives next to your house.",
+    "translation": "hàng xóm",
+    "correct": "neighbor",
+    "wrong1": "family friend",
+    "wrong2": "cousin"
+  },
+  {
+    "sentence": "A ___ is your uncle or aunt's child.",
+    "translation": "anh, chị, em họ",
+    "correct": "cousin",
+    "wrong1": "neighbor",
+    "wrong2": "friend"
+  },
+  {
+    "sentence": "An ___ person is relaxed and easy to talk to.",
+    "translation": "dễ gần, dễ tính",
+    "correct": "easygoing",
+    "wrong1": "strong",
+    "wrong2": "short"
+  },
+  {
+    "sentence": "A ___ is a friend of your family.",
+    "translation": "bạn của gia đình",
+    "correct": "family friend",
+    "wrong1": "neighbor",
+    "wrong2": "cousin"
+  },
+  {
+    "sentence": "She helps with ___ like cleaning and cooking.",
+    "translation": "việc nhà",
+    "correct": "house work",
+    "wrong1": "talk",
+    "wrong2": "help"
+  },
+  {
+    "sentence": "I feel ___ when I meet good people.",
+    "translation": "vui vẻ",
+    "correct": "happy",
+    "wrong1": "strong",
+    "wrong2": "easygoing"
+  },
+  {
+    "sentence": "To ___ someone means to see them for the first time.",
+    "translation": "gặp",
+    "correct": "meet",
+    "wrong1": "live",
+    "wrong2": "talk"
+  },
+  {
+    "sentence": "To ___ means to give help to someone.",
+    "translation": "giúp đỡ",
+    "correct": "help",
+    "wrong1": "wear glasses",
+    "wrong2": "live"
+  },
+  {
+    "sentence": "I like to ___ with my friends every day.",
+    "translation": "nói chuyện",
+    "correct": "talk",
+    "wrong1": "meet",
+    "wrong2": "help"
+  },
+  {
+    "sentence": "I ___ in a house near the park.",
+    "translation": "sống",
+    "correct": "live",
+    "wrong1": "talk",
+    "wrong2": "help"
+  },
+  {
+    "sentence": "My cousin has ___ that is black in color.",
+    "translation": "tóc đen",
+    "correct": "black hair",
+    "wrong1": "curly hair",
+    "wrong2": "wavy hair"
+  },
+  {
+    "sentence": "She has ___ that is curly and bouncy.",
+    "translation": "tóc xoăn",
+    "correct": "curly hair",
+    "wrong1": "black hair",
+    "wrong2": "strong"
+  },
+  {
+    "sentence": "He has ___ that moves in waves.",
+    "translation": "tóc sóng",
+    "correct": "wavy hair",
+    "wrong1": "black hair",
+    "wrong2": "curly hair"
+  },
+  {
+    "sentence": "She is ___ because she can lift heavy things.",
+    "translation": "mạnh mẽ",
+    "correct": "strong",
+    "wrong1": "short",
+    "wrong2": "friendly"
+  },
+  {
+    "sentence": "To ___ means to put glasses on your face.",
+    "translation": "đeo kính",
+    "correct": "wear glasses",
+    "wrong1": "talk",
+    "wrong2": "help"
+  },
+  {
+    "sentence": "I like ___. They are nice to talk to.",
+    "translation": "những người như vậy",
+    "correct": "people like that",
+    "wrong1": "family friend",
+    "wrong2": "neighbor"
+  }
+]

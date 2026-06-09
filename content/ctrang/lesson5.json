@@ -1,0 +1,219 @@
+[
+  {
+    "sentence": "I usually ___ my day with a cup of coffee.",
+    "translation": "Tôi thường bắt đầu ngày mới bằng một tách cà phê.",
+    "correct": "start",
+    "wrong1": "end",
+    "wrong2": "skip"
+  },
+  {
+    "sentence": "In my ___ time, I enjoy reading books.",
+    "translation": "Khi rảnh rỗi, tôi thích đọc sách.",
+    "correct": "free",
+    "wrong1": "busy",
+    "wrong2": "work"
+  },
+  {
+    "sentence": "I ___ close to a large shopping mall.",
+    "translation": "Tôi sống gần một trung tâm thương mại lớn.",
+    "correct": "live",
+    "wrong1": "work",
+    "wrong2": "travel"
+  },
+  {
+    "sentence": "My ___ consists of four people.",
+    "translation": "Gia đình tôi gồm có bốn người.",
+    "correct": "family",
+    "wrong1": "friends",
+    "wrong2": "neighbors"
+  },
+  {
+    "sentence": "I ___ as a software engineer.",
+    "translation": "Tôi làm nghề kỹ sư phần mềm.",
+    "correct": "work",
+    "wrong1": "live",
+    "wrong2": "study"
+  },
+  {
+    "sentence": "I often ___ weekends visiting friends.",
+    "translation": "Tôi thường dành những ngày cuối tuần thăm bạn bè.",
+    "correct": "spend",
+    "wrong1": "skip",
+    "wrong2": "cancel"
+  },
+  {
+    "sentence": "I like to ___ by listening to music.",
+    "translation": "Tôi thích thư giãn bằng cách nghe nhạc.",
+    "correct": "relax",
+    "wrong1": "work",
+    "wrong2": "run"
+  },
+  {
+    "sentence": "I am ___ for managing customer support.",
+    "translation": "Tôi chịu trách nhiệm quản lý hỗ trợ khách hàng.",
+    "correct": "responsible",
+    "wrong1": "unaware",
+    "wrong2": "accused"
+  },
+  {
+    "sentence": "I take ___ to stretch and refresh my mind.",
+    "translation": "Tôi nghỉ giải lao để duỗi người và làm mới đầu óc.",
+    "correct": "breaks",
+    "wrong1": "calls",
+    "wrong2": "notes"
+  },
+  {
+    "sentence": "I usually ___ lunch at a small restaurant.",
+    "translation": "Tôi thường ăn trưa tại một nhà hàng nhỏ.",
+    "correct": "have",
+    "wrong1": "skip",
+    "wrong2": "cook"
+  },
+  {
+    "sentence": "I enjoy learning ___ different cultures.",
+    "translation": "Tôi thích tìm hiểu về các nền văn hóa khác nhau.",
+    "correct": "about",
+    "wrong1": "against",
+    "wrong2": "without"
+  },
+  {
+    "sentence": "I commute ___ motorbike every day.",
+    "translation": "Tôi đi làm bằng xe máy mỗi ngày.",
+    "correct": "by",
+    "wrong1": "with",
+    "wrong2": "on"
+  },
+  {
+    "sentence": "I like ___ new people because I learn from them.",
+    "translation": "Tôi thích gặp gỡ những người mới vì tôi học hỏi được từ họ.",
+    "correct": "meeting",
+    "wrong1": "avoiding",
+    "wrong2": "ignoring"
+  },
+  {
+    "sentence": "I live close to the ___ center.",
+    "translation": "Tôi sống gần trung tâm cộng đồng.",
+    "correct": "community",
+    "wrong1": "shopping",
+    "wrong2": "police"
+  },
+  {
+    "sentence": "I often go to local ___ near my house.",
+    "translation": "Tôi thường đến các sự kiện địa phương gần nhà.",
+    "correct": "events",
+    "wrong1": "accidents",
+    "wrong2": "problems"
+  },
+  {
+    "sentence": "I start my day by going for a ___.",
+    "translation": "Tôi bắt đầu ngày mới bằng cách đi bộ.",
+    "correct": "walk",
+    "wrong1": "drive",
+    "wrong2": "run"
+  },
+  {
+    "sentence": "There is a ___ near my house.",
+    "translation": "Có một công viên gần nhà tôi.",
+    "correct": "park",
+    "wrong1": "mall",
+    "wrong2": "office"
+  },
+  {
+    "sentence": "I have a very ___ job that needs exercise.",
+    "translation": "Tôi có một công việc thể thao rất nặng nhọc.",
+    "correct": "athletic",
+    "wrong1": "boring",
+    "wrong2": "quiet"
+  },
+  {
+    "sentence": "I am working in ___ as an assistant.",
+    "translation": "Tôi làm việc trong lĩnh vực marketing với vai trò trợ lý.",
+    "correct": "marketing",
+    "wrong1": "finance",
+    "wrong2": "teaching"
+  },
+  {
+    "sentence": "I work as an ___.",
+    "translation": "Tôi làm trợ lý.",
+    "correct": "assistant",
+    "wrong1": "manager",
+    "wrong2": "teacher"
+  },
+  {
+    "sentence": "I am responsible for ___ customer support.",
+    "translation": "Tôi chịu trách nhiệm quản lý hỗ trợ khách hàng.",
+    "correct": "managing",
+    "wrong1": "ignoring",
+    "wrong2": "avoiding"
+  },
+  {
+    "sentence": "I manage the office ___ and appointments.",
+    "translation": "Tôi quản lý lịch làm việc và các cuộc hẹn của văn phòng.",
+    "correct": "schedule",
+    "wrong1": "party",
+    "wrong2": "game"
+  },
+  {
+    "sentence": "I manage the office schedule and ___.",
+    "translation": "Tôi quản lý lịch làm việc và các cuộc hẹn của văn phòng.",
+    "correct": "appointments",
+    "wrong1": "meetings",
+    "wrong2": "parties"
+  },
+  {
+    "sentence": "I work as a graphic ___.",
+    "translation": "Tôi làm nhà thiết kế đồ họa.",
+    "correct": "designer",
+    "wrong1": "writer",
+    "wrong2": "manager"
+  },
+  {
+    "sentence": "I prefer work that involves ___.",
+    "translation": "Tôi thích công việc liên quan đến sự sáng tạo.",
+    "correct": "creativity",
+    "wrong1": "strength",
+    "wrong2": "speed"
+  },
+  {
+    "sentence": "I like to relax by listening to ___.",
+    "translation": "Tôi thích thư giãn bằng cách nghe nhạc.",
+    "correct": "music",
+    "wrong1": "news",
+    "wrong2": "noise"
+  },
+  {
+    "sentence": "In my free time, I enjoy reading ___.",
+    "translation": "Khi rảnh rỗi, tôi thích đọc sách.",
+    "correct": "books",
+    "wrong1": "emails",
+    "wrong2": "letters"
+  },
+  {
+    "sentence": "Lunch ___ is all I have.",
+    "translation": "Nghỉ trưa là tất cả thời gian của tôi.",
+    "correct": "break",
+    "wrong1": "time",
+    "wrong2": "party"
+  },
+  {
+    "sentence": "Sometimes I eat with my ___.",
+    "translation": "Đôi khi tôi ăn với đồng nghiệp.",
+    "correct": "coworkers",
+    "wrong1": "family",
+    "wrong2": "neighbors"
+  },
+  {
+    "sentence": "I ___ by motorbike every day.",
+    "translation": "Tôi đi làm bằng xe máy mỗi ngày.",
+    "correct": "commute",
+    "wrong1": "run",
+    "wrong2": "walk"
+  },
+  {
+    "sentence": "I enjoy meeting new people and ___ friends.",
+    "translation": "Tôi thích gặp gỡ người mới và kết bạn.",
+    "correct": "making",
+    "wrong1": "losing",
+    "wrong2": "ignoring"
+  }
+]
