@@ -1,0 +1,149 @@
+[
+  {
+    "sentence": "There is a ___ and a table in the living room.",
+    "translation": "Có một ghế sofa và một cái bàn trong phòng khách.",
+    "correct": "sofa",
+    "wrong1": "kitchen",
+    "wrong2": "bed"
+  },
+  {
+    "sentence": "The ___ is the place to cook food.",
+    "translation": "Nhà bếp là nơi để nấu ăn.",
+    "correct": "kitchen",
+    "wrong1": "bathroom",
+    "wrong2": "living room"
+  },
+  {
+    "sentence": "The ___ is where you sleep at night.",
+    "translation": "Phòng ngủ là nơi bạn ngủ vào ban đêm.",
+    "correct": "bedroom",
+    "wrong1": "kitchen",
+    "wrong2": "sofa"
+  },
+  {
+    "sentence": "The ___ is where you take a shower or wash your hands.",
+    "translation": "Phòng tắm là nơi bạn tắm hoặc rửa tay.",
+    "correct": "bathroom",
+    "wrong1": "bedroom",
+    "wrong2": "table"
+  },
+  {
+    "sentence": "There is a ___ near the sofa.",
+    "translation": "Có một chiếc ghế gần ghế sofa.",
+    "correct": "chair",
+    "wrong1": "bathroom",
+    "wrong2": "bed"
+  },
+  {
+    "sentence": "It is next to the ___.",
+    "translation": "Nó nằm cạnh cửa sổ.",
+    "correct": "window",
+    "wrong1": "bed",
+    "wrong2": "table"
+  },
+  {
+    "sentence": "There is a ___ and a chair next to the window.",
+    "translation": "Có một chiếc giường và một chiếc ghế bên cạnh cửa sổ.",
+    "correct": "bed",
+    "wrong1": "sofa",
+    "wrong2": "kitchen"
+  },
+  {
+    "sentence": "The chair is ___ the sofa.",
+    "translation": "Chiếc ghế gần ghế sofa.",
+    "correct": "near",
+    "wrong1": "big",
+    "wrong2": "comfortable"
+  },
+  {
+    "sentence": "The bathroom is ___ the bedroom and kitchen.",
+    "translation": "Phòng tắm nằm giữa phòng ngủ và nhà bếp.",
+    "correct": "between",
+    "wrong1": "next to",
+    "wrong2": "around"
+  },
+  {
+    "sentence": "The bathroom is ___ the bedroom and kitchen.",
+    "translation": "Phòng tắm nằm kế bên phòng ngủ và nhà bếp.",
+    "correct": "next to",
+    "wrong1": "between",
+    "wrong2": "near"
+  },
+  {
+    "sentence": "The bed is very ___.",
+    "translation": "Chiếc giường rất thoải mái.",
+    "correct": "comfortable",
+    "wrong1": "small",
+    "wrong2": "bright"
+  },
+  {
+    "sentence": "There is a ___ table and some chairs.",
+    "translation": "Có một cái bàn lớn và vài chiếc ghế.",
+    "correct": "big",
+    "wrong1": "comfortable",
+    "wrong2": "small"
+  },
+  {
+    "sentence": "There is a ___ table next to the sofa.",
+    "translation": "Có một cái bàn nhỏ bên cạnh ghế sofa.",
+    "correct": "small",
+    "wrong1": "big",
+    "wrong2": "comfortable"
+  },
+  {
+    "sentence": "What ___ do you have in your living room?",
+    "translation": "Bạn có những món đồ nội thất nào trong phòng khách?",
+    "correct": "furniture",
+    "wrong1": "rooms",
+    "wrong2": "windows"
+  },
+  {
+    "sentence": "My home has many windows, so it is very ___.",
+    "translation": "Nhà tôi có nhiều cửa sổ, nên rất sáng.",
+    "correct": "bright",
+    "wrong1": "dark",
+    "wrong2": "small"
+  },
+  {
+    "sentence": "That is ___.",
+    "translation": "Điều đó thật tiện lợi.",
+    "correct": "convenient",
+    "wrong1": "difficult",
+    "wrong2": "comfortable"
+  },
+  {
+    "sentence": "How many rooms are in the ___.",
+    "translation": "Có bao nhiêu phòng trong căn hộ?",
+    "correct": "apartment",
+    "wrong1": "house",
+    "wrong2": "bedroom"
+  },
+  {
+    "sentence": "What rooms are in your ___.",
+    "translation": "Có những phòng nào trong nhà của bạn?",
+    "correct": "home",
+    "wrong1": "kitchen",
+    "wrong2": "sofa"
+  },
+  {
+    "sentence": "How many ___ are in the kitchen?",
+    "translation": "Có bao nhiêu chiếc ghế trong nhà bếp?",
+    "correct": "chairs",
+    "wrong1": "tables",
+    "wrong2": "windows"
+  },
+  {
+    "sentence": "There are three chairs ___ the table.",
+    "translation": "Có ba chiếc ghế xung quanh cái bàn.",
+    "correct": "around",
+    "wrong1": "inside",
+    "wrong2": "above"
+  },
+  {
+    "sentence": "I have a ___ home.",
+    "translation": "Tôi có một ngôi nhà tương tự.",
+    "correct": "similar",
+    "wrong1": "big",
+    "wrong2": "bright"
+  }
+]

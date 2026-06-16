@@ -1,0 +1,184 @@
+[
+  {
+    "sentence": "I’d like an ___ matcha latte, please.",
+    "translation": "Tôi muốn một ly matcha latte đá, làm ơn.",
+    "correct": "iced matcha latte",
+    "wrong1": "black coffee",
+    "wrong2": "green tea"
+  },
+  {
+    "sentence": "Jack drinks ___ coffee every morning.",
+    "translation": "Jack uống cà phê đen mỗi sáng.",
+    "correct": "black",
+    "wrong1": "sweet",
+    "wrong2": "iced"
+  },
+  {
+    "sentence": "The ___ of coffee smells good.",
+    "translation": "Hương thơm của cà phê rất dễ chịu.",
+    "correct": "aroma",
+    "wrong1": "color",
+    "wrong2": "taste"
+  },
+  {
+    "sentence": "I like ___ brewed coffee every morning.",
+    "translation": "Tôi thích cà phê mới pha mỗi sáng.",
+    "correct": "freshly",
+    "wrong1": "cold",
+    "wrong2": "old"
+  },
+  {
+    "sentence": "I often drink ___ tea for refreshment.",
+    "translation": "Tôi thường uống trà xanh để giải khát.",
+    "correct": "green",
+    "wrong1": "black",
+    "wrong2": "herbal"
+  },
+  {
+    "sentence": "I add ___ to my tea instead of sugar.",
+    "translation": "Tôi thêm mật ong vào trà thay vì đường.",
+    "correct": "honey",
+    "wrong1": "salt",
+    "wrong2": "lemon"
+  },
+  {
+    "sentence": "Some people like ___ in their tea.",
+    "translation": "Một số người thích đường trong trà của họ.",
+    "correct": "sugar",
+    "wrong1": "honey",
+    "wrong2": "salt"
+  },
+  {
+    "sentence": "I enjoy trying new ___ at cafés.",
+    "translation": "Tôi thích thử các hương vị mới ở quán cà phê.",
+    "correct": "flavors",
+    "wrong1": "tastes",
+    "wrong2": "aromas"
+  },
+  {
+    "sentence": "New ___ often have many drink choices.",
+    "translation": "Các quán cà phê mới thường có nhiều lựa chọn đồ uống.",
+    "correct": "cafés",
+    "wrong1": "restaurants",
+    "wrong2": "stores"
+  },
+  {
+    "sentence": "I do not like drinks that are ___.",
+    "translation": "Tôi không thích đồ uống có gia vị.",
+    "correct": "spicy",
+    "wrong1": "sweet",
+    "wrong2": "cold"
+  },
+  {
+    "sentence": "The flavor is very ___ and smooth.",
+    "translation": "Hương vị rất cân bằng và nhẹ nhàng.",
+    "correct": "balanced",
+    "wrong1": "strong",
+    "wrong2": "bitter"
+  },
+  {
+    "sentence": "The drink tastes very ___ and soft.",
+    "translation": "Đồ uống có vị nhẹ và dịu.",
+    "correct": "mild",
+    "wrong1": "spicy",
+    "wrong2": "strong"
+  },
+  {
+    "sentence": "I like the ___ of this coffee.",
+    "translation": "Tôi thích vị của cà phê này.",
+    "correct": "taste",
+    "wrong1": "color",
+    "wrong2": "smell"
+  },
+  {
+    "sentence": "This is my ___ drink.",
+    "translation": "Đây là đồ uống yêu thích của tôi.",
+    "correct": "favorite",
+    "wrong1": "cold",
+    "wrong2": "new"
+  },
+  {
+    "sentence": "Can you ___ a good drink for me?",
+    "translation": "Bạn có thể giới thiệu đồ uống ngon cho tôi không?",
+    "correct": "recommend",
+    "wrong1": "avoid",
+    "wrong2": "forget"
+  },
+  {
+    "sentence": "I really like ___ for lunch.",
+    "translation": "Tôi rất thích bánh mì kẹp cho bữa trưa.",
+    "correct": "sandwiches",
+    "wrong1": "soups",
+    "wrong2": "desserts"
+  },
+  {
+    "sentence": "I prefer ___ snacks to salty ones.",
+    "translation": "Tôi thích đồ ăn nhẹ ngọt hơn mặn.",
+    "correct": "sweet",
+    "wrong1": "salty",
+    "wrong2": "bitter"
+  },
+  {
+    "sentence": "Do you like sweet or ___ snacks?",
+    "translation": "Bạn thích đồ ăn nhẹ ngọt hay mặn?",
+    "correct": "salty",
+    "wrong1": "sweet",
+    "wrong2": "sour"
+  },
+  {
+    "sentence": "How does this ___ taste?",
+    "translation": "Nước chanh này có vị thế nào?",
+    "correct": "lemonade",
+    "wrong1": "juice",
+    "wrong2": "tea"
+  },
+  {
+    "sentence": "My favorite dish is ___ salad.",
+    "translation": "Món ăn yêu thích của tôi là salad trái cây.",
+    "correct": "fruit",
+    "wrong1": "green",
+    "wrong2": "potato"
+  },
+  {
+    "sentence": "I like food that is sweet and ___.",
+    "translation": "Tôi thích thức ăn ngọt và lành mạnh.",
+    "correct": "healthy",
+    "wrong1": "spicy",
+    "wrong2": "salty"
+  },
+  {
+    "sentence": "I must have ___ chips with my meal.",
+    "translation": "Tôi phải có khoai tây chiên với bữa ăn của mình.",
+    "correct": "potato",
+    "wrong1": "corn",
+    "wrong2": "fruit"
+  },
+  {
+    "sentence": "These chips taste ___ and salty.",
+    "translation": "Khoai tây chiên này giòn và mặn.",
+    "correct": "crunchy",
+    "wrong1": "soft",
+    "wrong2": "sweet"
+  },
+  {
+    "sentence": "___ drinks like black coffee are strong.",
+    "translation": "Đồ uống đắng như cà phê đen thì mạnh.",
+    "correct": "Bitter",
+    "wrong1": "Sweet",
+    "wrong2": "Sour"
+  },
+  {
+    "sentence": "I like sweet drinks such as ___ juice.",
+    "translation": "Tôi thích đồ uống ngọt như nước ép dưa hấu.",
+    "correct": "watermelon",
+    "wrong1": "green",
+    "wrong2": "lemon"
+  },
+  {
+    "sentence": "I like to ___ new flavors at cafés.",
+    "translation": "Tôi thích thử các hương vị mới ở quán cà phê.",
+    "correct": "try",
+    "wrong1": "buy",
+    "wrong2": "avoid"
+  }
+]
