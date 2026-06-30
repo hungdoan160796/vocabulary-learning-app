@@ -71,19 +71,13 @@ function escapeRegex(str) {
 
 async function generateVocabularyList(markdown) {
   const prompt = `
-You are extracting vocabulary for English learners.
+You are making vocabulary list for English learners.
 
 TASK:
 Generate a JSON array of useful vocabulary words from the lesson.
 
 RULES:
-- Include only meaningful vocabulary that helps understand the lesson content
-- Prefer:
-  nouns, verbs, adjectives, phrases
-- Number of vocabulary is around 20-30.  
-- Avoid:
-  function words, grammar words, filler words, names of people/places/brands
-- The array must not contain duplicates
+- Each line of the markdown is one phrase to teach learner.
 - Output ONLY valid JSON array
 - No markdown
 
@@ -144,23 +138,34 @@ function locateVocabularySentences(
   markdown,
   vocabularyList
 ) {
-  const cleanText = cleanMarkdown(markdown)
+  // Keep sentence-ending punctuation for splitting — cleaning
+  // everything first removed the punctuation and prevented
+  // sentence extraction.
+  const withoutCode = markdown.replace(/```[\s\S]*?```/g, "\n")
 
-  // Split by sentence-ending punctuation
-  const sentences =
-    cleanText.match(/[^.!?]+[.!?]+/g) || []
+  // Try to split into sentences using punctuation. If that
+  // yields nothing, fall back to splitting on newlines.
+  let sentences = withoutCode.match(/[^.!?]+[.!?]+/g)
+
+  if (!sentences || sentences.length === 0) {
+    sentences = withoutCode.split(/\n+/).filter(Boolean)
+  }
 
   const results = []
 
   for (const vocab of vocabularyList) {
-    const regex = new RegExp(
-      `\\b${escapeRegex(vocab)}\\b`,
-      "i"
-    )
+    // Escape the vocab phrase and search case-insensitively
+    const regex = new RegExp(escapeRegex(vocab), "i")
 
-    const matchedSentence = sentences.find(
-      (sentence) => regex.test(sentence)
-    )
+    const matchedSentence = sentences.find((sentence) => {
+      // Clean just this sentence for matching (remove markdown, extra whitespace)
+      const cleaned = sentence
+        .replace(/[#>*_`\[\]]/g, " ")
+        .replace(/\s+/g, " ")
+        .trim()
+
+      return regex.test(cleaned)
+    })
 
     if (matchedSentence) {
       results.push({
@@ -185,8 +190,8 @@ async function generateFlashcards(
 You are generating vocabulary revision flashcards.
 
 TASK:
-See each object as a sentence with a vocabulary.
-Convert each object into this format:
+See each object as a sentence with a vocabulary or phrase.
+Convert each object into this example format:
 
 {
   "sentence": "A basic ___ has a subject and verb."
@@ -197,10 +202,10 @@ Convert each object into this format:
 }
 
 RULES:
-- The sentence is written using simple language, as short as possible, and clearly signals the correct word to be filled in ___
-- There must be ___ in the sentence, where the correct word should've been
+- The sentence is written using simple language, as short as possible, and clearly signals the correct word/phrase to be filled in ___
+- There must be ___ in the sentence, where the correct word/phrase should've been
 - translation is the meaning of the completed sentence in vietnamese
-- wrong answers must not be synonyms of the correct word, or acceptably close in meaning
+- wrong answers must not be synonyms of the correct word/phrase, or acceptably close in meaning
 - If the sentence does not have meaning of wrongly formatted, write a new sentence.
 - Output ONLY valid JSON array
 - No markdown
@@ -268,6 +273,9 @@ async function main() {
   const vocabularyList =
     await generateVocabularyList(markdown)
 
+  // Print step 1 results for debugging
+  console.log("STEP 1 - Vocabulary List Result:\n", JSON.stringify(vocabularyList, null, 2))
+
   // Optional debug output
   const vocabDebugPath = path.join(
     OUTPUT_CONTENT_DIR, "content", user,
@@ -288,6 +296,9 @@ async function main() {
       markdown,
       vocabularyList
     )
+
+  // Print step 2 results for debugging
+  console.log("STEP 2 - Located Sentences:\n", JSON.stringify(sentenceObjects, null, 2))
 
   // Optional debug output
   const sentenceDebugPath = path.join(

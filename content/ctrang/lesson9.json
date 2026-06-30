@@ -1,0 +1,114 @@
+[
+  {
+    "sentence": "I like to ___ with my friends on weekends.",
+    "translation": "Tôi thích chơi bài với bạn bè vào cuối tuần.",
+    "correct": "play cards",
+    "wrong1": "read books",
+    "wrong2": "cook dinner"
+  },
+  {
+    "sentence": "She is ___ learning new languages.",
+    "translation": "Cô ấy quan tâm đến việc học ngôn ngữ mới.",
+    "correct": "interested in",
+    "wrong1": "bored with",
+    "wrong2": "tired of"
+  },
+  {
+    "sentence": "I ___ when I travel to new places.",
+    "translation": "Tôi chụp ảnh khi đi du lịch đến những nơi mới.",
+    "correct": "take photos",
+    "wrong1": "write letters",
+    "wrong2": "listen music"
+  },
+  {
+    "sentence": "We like to ___ every weekend.",
+    "translation": "Chúng tôi thích dành thời gian với gia đình mỗi cuối tuần.",
+    "correct": "spend time with family",
+    "wrong1": "play video games",
+    "wrong2": "go shopping"
+  },
+  {
+    "sentence": "He goes to ___ to stay healthy.",
+    "translation": "Anh ấy đến phòng tập thể dục để giữ sức khỏe.",
+    "correct": "go to the gym",
+    "wrong1": "visit the park",
+    "wrong2": "watch TV"
+  },
+  {
+    "sentence": "I ___ in the morning to relax my body.",
+    "translation": "Tôi tập yoga vào buổi sáng để thư giãn cơ thể.",
+    "correct": "do yoga",
+    "wrong1": "eat breakfast",
+    "wrong2": "read newspaper"
+  },
+  {
+    "sentence": "We often ___ on family nights.",
+    "translation": "Chúng tôi thường chơi trò chơi bảng vào các đêm gia đình.",
+    "correct": "play board games",
+    "wrong1": "watch movies",
+    "wrong2": "go swimming"
+  },
+  {
+    "sentence": "He ___ playing football and basketball.",
+    "translation": "Anh ấy thích thể thao như bóng đá và bóng rổ.",
+    "correct": "is interested in",
+    "wrong1": "hates",
+    "wrong2": "ignores"
+  },
+  {
+    "sentence": "She ___ animals in her free time.",
+    "translation": "Cô ấy thích vẽ động vật vào thời gian rảnh.",
+    "correct": "likes to draw",
+    "wrong1": "likes to cook",
+    "wrong2": "likes to sing"
+  },
+  {
+    "sentence": "I work from Monday to Friday, so I am busy ___ .",
+    "translation": "Tôi làm việc từ thứ Hai đến thứ Sáu, vì vậy tôi bận trong tuần.",
+    "correct": "during the week",
+    "wrong1": "on weekends",
+    "wrong2": "at night"
+  },
+  {
+    "sentence": "This puzzle is very ___.",
+    "translation": "Câu đố này rất khó.",
+    "correct": "difficult",
+    "wrong1": "easy",
+    "wrong2": "fun"
+  },
+  {
+    "sentence": "___ you should try your best every day.",
+    "translation": "Tôi cảm thấy rằng bạn nên cố gắng hết sức mỗi ngày.",
+    "correct": "I feel that",
+    "wrong1": "I think so",
+    "wrong2": "I hope that"
+  },
+  {
+    "sentence": "Brushing teeth is ___ to stay healthy.",
+    "translation": "Đánh răng là một phần trong thói quen hàng ngày để giữ sức khỏe.",
+    "correct": "as part of my daily routine",
+    "wrong1": "sometimes done",
+    "wrong2": "optional"
+  },
+  {
+    "sentence": "Photos help me ___ forever.",
+    "translation": "Ảnh giúp tôi nhớ những khoảnh khắc đặc biệt mãi mãi.",
+    "correct": "remember special moments",
+    "wrong1": "forget old days",
+    "wrong2": "ignore memories"
+  },
+  {
+    "sentence": "Many people ___ on weekends.",
+    "translation": "Nhiều người xem bóng đá vào cuối tuần.",
+    "correct": "watch football",
+    "wrong1": "play chess",
+    "wrong2": "read books"
+  },
+  {
+    "sentence": "I don’t ___ to go out tonight.",
+    "translation": "Tôi không có tâm trạng để đi ra ngoài tối nay.",
+    "correct": "have the mood",
+    "wrong1": "have the time",
+    "wrong2": "have the money"
+  }
+]

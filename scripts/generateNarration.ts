@@ -90,8 +90,15 @@ function formatNarration(
   text: string
 ) {
   return text
-    .replaceAll("*", "")
-    .replaceAll('"', "")
+    .split(/(<[^>]+>)/g)
+    .map(segment =>
+      segment.startsWith("<")
+        ? segment
+        : segment
+            .replaceAll("*", "")
+            .replaceAll('"', "")
+    )
+    .join("")
     .replaceAll(
       "! ",
       "!<break time=\"1s\" /> "
@@ -223,7 +230,7 @@ async function run() {
 
   if (!username || !file) {
     console.error(
-      "Usage: npx tsx scripts/generateNarrations.ts username lesson1.json"
+      "Usage: npx tsx scripts/generateNarration.ts username lesson1.json"
     )
 
     process.exit(1)
